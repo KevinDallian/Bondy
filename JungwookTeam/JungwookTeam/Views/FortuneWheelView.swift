@@ -14,18 +14,18 @@ struct FortuneWheelView: View {
     @State var isEnded = false
         
         var body: some View {
-            ZStack {
-                FortuneWheel(titles: players, size: 320) { i in
-                    selectedIndex = i
-                    isEnded = true
+            ZStack{
+                Rectangle()
+                    .foregroundColor(Color(red: 103/255, green: 57/255, blue: 155/255))
+                ZStack {
+                    FortuneWheel(titles: players, size: 320) { i in
+                        selectedIndex = i
+                        isEnded = true
+                    }
                 }
             }
             .alert("Wheel ended", isPresented: $isEnded) {
-                Button {
-                    
-                } label: {
-                    Text("Back to Menu")
-                }
+                
             } message: {
                 Text("\(players[selectedIndex])")
             }

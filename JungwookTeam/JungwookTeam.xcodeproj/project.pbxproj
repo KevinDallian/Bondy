@@ -77,17 +77,13 @@
 		3F5E83D729F136AA00BFB344 /* JungwookTeam */ = {
 			isa = PBXGroup;
 			children = (
+				D8695E8029FBC88E008C68F5 /* Views */,
 				D8695E6D29FB8F9C008C68F5 /* Model */,
 				D81123D829FA5FE8000A3ACF /* Lottie */,
 				3F5E848129FA541500BFB344 /* DropdownMenu */,
 				3F5E83D829F136AA00BFB344 /* JungwookTeamApp.swift */,
-				3F5E842729F3AEF200BFB344 /* TestPageView.swift */,
-				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
-				3F5E842329F3A84500BFB344 /* TestPageFile.swift */,
 				3F5E842229F3A28F00BFB344 /* Assets */,
 				3F5E83DE29F136AB00BFB344 /* Preview Content */,
-				3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */,
-				D8695E7E29FBA5B6008C68F5 /* FortuneWheelView.swift */,
 			);
 			path = JungwookTeam;
 			sourceTree = "<group>";
@@ -133,6 +129,18 @@
 				D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D8695E8029FBC88E008C68F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */,
+				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
+				3F5E842329F3A84500BFB344 /* TestPageFile.swift */,
+				D8695E7E29FBA5B6008C68F5 /* FortuneWheelView.swift */,
+				3F5E842729F3AEF200BFB344 /* TestPageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D87C249529FAB3DA003005EE /* LottieJSON */ = {

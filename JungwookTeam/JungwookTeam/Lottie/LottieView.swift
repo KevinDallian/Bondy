@@ -39,7 +39,6 @@ struct LottieView_Previews: PreviewProvider {
             Rectangle()
             LottieView(name: "Clap", loopMode: .loop)
                 .scaleEffect(0.2)
-            
         }
     }
 }
