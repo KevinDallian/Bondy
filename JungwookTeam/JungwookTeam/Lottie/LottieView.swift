@@ -37,8 +37,9 @@ struct LottieView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             Rectangle()
-            LottieView(name: "3SecTimer", loopMode: .loop)
-                .scaleEffect(0.3)
+            LottieView(name: "Clap", loopMode: .loop)
+                .scaleEffect(0.2)
+            
         }
     }
 }
