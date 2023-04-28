@@ -14,6 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            
             TabView(selection: $pageIndex) {
                 ForEach(pages) { page in
                     VStack{

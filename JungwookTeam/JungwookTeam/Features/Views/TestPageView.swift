@@ -20,7 +20,6 @@ struct TestPageView: View {
                 .background(.gray.opacity(0.10))
                 .cornerRadius(10)
                 .padding()
-            
             Text(page.title)
             
             Text(page.description)
