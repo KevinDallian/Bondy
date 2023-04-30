@@ -17,7 +17,7 @@ struct FortuneWheelView: View {
         NavigationView{
             ZStack{
                 Rectangle()
-                    .foregroundColor(Color(red: 103/255, green: 57/255, blue: 155/255))
+                    .foregroundColor(Color("background"))
                     .ignoresSafeArea()
                 VStack{
                     Text("Shuffle Feedback Player")
@@ -25,12 +25,12 @@ struct FortuneWheelView: View {
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .offset(y: -20)
-                        .padding(.vertical, 30)
+                        .padding(30)
                     Text("Roll the roullete to choose player")
                         .font(.title2)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
-                        .padding(.bottom, 30)
+                        .padding([.leading, .bottom, .trailing], 30)
                     if isEnded{
                         Text("\(players[selectedIndex])")
                             .font(.largeTitle.weight(.bold))
@@ -42,20 +42,22 @@ struct FortuneWheelView: View {
                         }
                     }
                     Spacer()
-                    
-                    NavigationLink{
-                        FeedbackView()
-                    }label: {
-                        if isEnded{
-                            ButtonView(title: "It's Feedback Time")
-                                
-                        }else{
-                            ButtonView(title: "It's Feedback Time", color: Color.gray)
-                        }
-                        
-                    }.disabled(!isEnded)
-                        
-                }.padding()
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color("backgroundButton"))
+                            .ignoresSafeArea()
+                            .frame(height: 120)
+                        NavigationLink{
+                            FeedbackView(player: players[selectedIndex])
+                        }label: {
+                            if isEnded{
+                                ButtonView(title: "It's Feedback Time")
+                            }else{
+                                ButtonView(title: "It's Feedback Time", color: Color.gray)
+                            }
+                            
+                        }.disabled(!isEnded)
+                    }                }
                     .animation(.easeInOut, value: isEnded)
             }
         }

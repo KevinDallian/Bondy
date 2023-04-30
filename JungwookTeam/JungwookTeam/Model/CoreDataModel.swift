@@ -72,6 +72,7 @@ class CoreDataModel : ObservableObject{
     func addPlayer(name: String){
         let player = PlayerEntity(context: context)
         player.name = name
+        // un-comment if the card assets are done
 //        for _ in 0...3{
 //            let card = cards.randomElement()!
 //            player.addToCards(card)
