@@ -58,7 +58,6 @@ struct HomeView: View {
                     HStack{
                         Spacer()
                         NavigationLink{
-                            CoreDataTest(cdm: cdm, players: names)
                             // link ke StoryView
                         }label: {
                             ButtonView(title: "Start")
