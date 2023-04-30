@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var counter = 1
     @State private var names : [String] = [""]
-    
+    @StateObject var cdm = CoreDataModel()
     var body: some View {
         NavigationView {
             ZStack{
@@ -27,7 +27,7 @@ struct HomeView: View {
                         .padding(.horizontal, 20.0)
                     Form{
                         Section{
-                            ForEach(0..<counter, id: \.self) { index in
+                            ForEach(0 ..< counter, id: \.self) { index in
                                 TextField("Name", text: self.$names[index])
                             }.onDelete { indexSet in
                                 names.remove(atOffsets: indexSet)
@@ -57,8 +57,11 @@ struct HomeView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        ButtonView(title: "START") {
-                            //
+                        NavigationLink{
+                            CoreDataTest(cdm: cdm, players: names)
+                            // link ke StoryView
+                        }label: {
+                            ButtonView(title: "Start")
                         }
                         Spacer()
                     }

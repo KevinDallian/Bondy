@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import SwiftUI
 
 class CoreDataModel : ObservableObject{
     let container : NSPersistentContainer
@@ -21,17 +22,25 @@ class CoreDataModel : ObservableObject{
             }
         }
         context = container.viewContext
+        getCards()
+        if cards.isEmpty{
+            addCard(name: "Shield", image: "shield")
+            addCard(name: "Kursi", image: "kursi")
+            addCard(name: "Sepatu", image: "sepatu")
+            addCard(name: "Kucing", image: "kucing")
+        }
+        getPlayers()
+        for player in players {
+            context.delete(player)
+        }
     }
     
     func saveData(){
-        if context.hasChanges{
-            do{
-                try context.save()
-            } catch let error{
-                print("Error saving data : \(error.localizedDescription)")
-            }
+        do{
+            try context.save()
+        } catch let error{
+            print("Error saving data : \(error.localizedDescription)")
         }
-        getCards()
         getPlayers()
     }
     
@@ -63,10 +72,16 @@ class CoreDataModel : ObservableObject{
     func addPlayer(name: String){
         let player = PlayerEntity(context: context)
         player.name = name
-        for _ in 0...3{
-            let card = cards.randomElement()!
-            player.addToCards(card)
-        }
+//        for _ in 0...3{
+//            let card = cards.randomElement()!
+//            player.addToCards(card)
+//        }
         saveData()
+    }
+    
+    func initializeGame(players: [String]){
+        for player in players{
+            addPlayer(name: player)
+        }
     }
 }
