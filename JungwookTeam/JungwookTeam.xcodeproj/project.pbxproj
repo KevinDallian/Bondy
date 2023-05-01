@@ -13,6 +13,7 @@
 		3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */; };
 		3F5E847E29FA2FC000BFB344 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */; };
 		3F5E84C729FE92F100BFB344 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E84C629FE92F100BFB344 /* OnBoardingModel.swift */; };
+		3F5E84CB29FEAC7A00BFB344 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E84CA29FEAC7A00BFB344 /* OnBoardingPageView.swift */; };
 		D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81123D629FA5FD9000A3ACF /* LottieView.swift */; };
 		D81123DB29FA603F000A3ACF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D81123DA29FA603F000A3ACF /* Lottie */; };
 		D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8695E6E29FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld */; };
@@ -30,6 +31,7 @@
 		3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		3F5E84C629FE92F100BFB344 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		3F5E84CA29FEAC7A00BFB344 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
 		D81123D629FA5FD9000A3ACF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D8695E6F29FB8FCE008C68F5 /* JungwookTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JungwookTeam.xcdatamodel; sourceTree = "<group>"; };
 		D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				3F5E83D729F136AA00BFB344 /* JungwookTeam */,
-				3F5E83DE29F136AB00BFB344 /* Preview Content */,
 				3F5E83D629F136AA00BFB344 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +74,7 @@
 				3F5E84BC29FC264600BFB344 /* Application */,
 				3F5E84BD29FC266400BFB344 /* Core */,
 				3F5E84BE29FC266F00BFB344 /* Features */,
+				3F5E83DE29F136AB00BFB344 /* Preview Content */,
 			);
 			path = JungwookTeam;
 			sourceTree = "<group>";
@@ -192,6 +194,7 @@
 			children = (
 				3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */,
 				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
+				3F5E84CA29FEAC7A00BFB344 /* OnBoardingPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				D8695E7229FB9C67008C68F5 /* CoreDataModel.swift in Sources */,
 				D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */,
+				3F5E84CB29FEAC7A00BFB344 /* OnBoardingPageView.swift in Sources */,
 				3F5E84C729FE92F100BFB344 /* OnBoardingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

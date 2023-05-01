@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View{
-        VStack{
-            Text("dfsdfsd")
+        NavigationView {
+            ZStack{
+                Color("Purple").ignoresSafeArea()
+                VStack{
+                   OnBoardingView()
+                }
+            }
         }
     }
 }
