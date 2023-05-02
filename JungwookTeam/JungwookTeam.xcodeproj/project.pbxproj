@@ -12,6 +12,8 @@
 		3F5E83DD29F136AB00BFB344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DC29F136AB00BFB344 /* Assets.xcassets */; };
 		3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */; };
 		3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E847D29FA2FC000BFB344 /* RuleView.swift */; };
+		874A386C2A011FB80006DF92 /* BackgroundMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */; };
+		874A38702A0120DE0006DF92 /* chimes-7035.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 874A386F2A0120DE0006DF92 /* chimes-7035.mp3 */; };
 		D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81123D629FA5FD9000A3ACF /* LottieView.swift */; };
 		D81123DB29FA603F000A3ACF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D81123DA29FA603F000A3ACF /* Lottie */; };
 		D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8695E6E29FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld */; };
@@ -29,6 +31,8 @@
 		3F5E83DC29F136AB00BFB344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F5E847D29FA2FC000BFB344 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusicModel.swift; sourceTree = "<group>"; };
+		874A386F2A0120DE0006DF92 /* chimes-7035.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chimes-7035.mp3"; sourceTree = "<group>"; };
 		D81123D629FA5FD9000A3ACF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D8695E6F29FB8FCE008C68F5 /* JungwookTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JungwookTeam.xcdatamodel; sourceTree = "<group>"; };
 		D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				3F5E83DC29F136AB00BFB344 /* Assets.xcassets */,
+				874A386A2A011EC80006DF92 /* Sounds */,
 			);
 			name = Assets;
 			path = ../..;
@@ -135,6 +140,23 @@
 				D81123D829FA5FE8000A3ACF /* Lottie */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		874A386A2A011EC80006DF92 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				874A386F2A0120DE0006DF92 /* chimes-7035.mp3 */,
+				874A386D2A011FCE0006DF92 /* Model */,
+				874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		874A386D2A011FCE0006DF92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D81123D829FA5FE8000A3ACF /* Lottie */ = {
@@ -247,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874A38702A0120DE0006DF92 /* chimes-7035.mp3 in Resources */,
 				D87C249729FAB3F9003005EE /* 3SecTimer.json in Resources */,
 				D87C249929FAB90A003005EE /* Clap.json in Resources */,
 				3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */,
@@ -268,6 +291,7 @@
 				D8695E7229FB9C67008C68F5 /* CoreDataModel.swift in Sources */,
 				D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */,
 				D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */,
+				874A386C2A011FB80006DF92 /* BackgroundMusicModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

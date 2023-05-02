@@ -17,6 +17,10 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            playSound(sound: "chimes-7035", type: "mp3")
+            audioPlayer?.numberOfLoops = 100
+        })
     }
 }
 
