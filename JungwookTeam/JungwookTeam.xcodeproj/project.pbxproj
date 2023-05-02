@@ -26,6 +26,7 @@
 		D8695E8529FC19D1008C68F5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8695E8429FC19D1008C68F5 /* ButtonView.swift */; };
 		D87C249729FAB3F9003005EE /* 3SecTimer.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249629FAB3F9003005EE /* 3SecTimer.json */; };
 		D87C249929FAB90A003005EE /* Clap.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249829FAB90A003005EE /* Clap.json */; };
+		D8B6DB2D29FE9CA6004F5A25 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6DB2C29FE9CA6004F5A25 /* FeedbackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		D8695E8429FC19D1008C68F5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D87C249629FAB3F9003005EE /* 3SecTimer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3SecTimer.json; sourceTree = "<group>"; };
 		D87C249829FAB90A003005EE /* Clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Clap.json; sourceTree = "<group>"; };
+		D8B6DB2C29FE9CA6004F5A25 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				D8695E7E29FBA5B6008C68F5 /* FortuneWheelView.swift */,
 				3F5E842729F3AEF200BFB344 /* TestPageView.swift */,
 				D8695E8129FBCBCA008C68F5 /* HomeView.swift */,
+				D8B6DB2C29FE9CA6004F5A25 /* FeedbackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				3F5E848329FA55D600BFB344 /* DropdownTestView.swift in Sources */,
 				D8695E8529FC19D1008C68F5 /* ButtonView.swift in Sources */,
+				D8B6DB2D29FE9CA6004F5A25 /* FeedbackView.swift in Sources */,
 				D8695E8229FBCBCA008C68F5 /* HomeView.swift in Sources */,
 				D8695E7229FB9C67008C68F5 /* CoreDataModel.swift in Sources */,
 				D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */,

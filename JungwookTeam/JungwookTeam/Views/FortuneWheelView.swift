@@ -9,31 +9,64 @@ import SwiftUI
 import FortuneWheel
 
 struct FortuneWheelView: View {
-    private var players = ["KD", "Geraldy", "CC", "Vicky", "Ricky"]
+    var players : [String]
     @State var selectedIndex = 0
     @State var isEnded = false
         
-        var body: some View {
+    var body: some View {
+        NavigationView{
             ZStack{
                 Rectangle()
-                    .foregroundColor(Color(red: 103/255, green: 57/255, blue: 155/255))
-                ZStack {
-                    FortuneWheel(titles: players, size: 320) { i in
-                        selectedIndex = i
-                        isEnded = true
+                    .foregroundColor(Color("background"))
+                    .ignoresSafeArea()
+                VStack{
+                    Text("Shuffle Feedback Player")
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .offset(y: -20)
+                        .padding(30)
+                    Text("Roll the roullete to choose player")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding([.leading, .bottom, .trailing], 30)
+                    if isEnded{
+                        Text("\(players[selectedIndex])")
+                            .font(.largeTitle.weight(.bold))
+                            .foregroundColor(.white)
+                    }else{
+                        FortuneWheel(titles: players, size: 300) { i in
+                            selectedIndex = i
+                            isEnded = true
+                        }
                     }
-                }
-            }
-            .alert("Wheel ended", isPresented: $isEnded) {
-                
-            } message: {
-                Text("\(players[selectedIndex])")
+                    Spacer()
+                    ZStack{
+                        Rectangle()
+                            .foregroundColor(Color("backgroundButton"))
+                            .ignoresSafeArea()
+                            .frame(height: 120)
+                        NavigationLink{
+                            FeedbackView(player: players[selectedIndex])
+                        }label: {
+                            if isEnded{
+                                ButtonView(title: "It's Feedback Time")
+                            }else{
+                                ButtonView(title: "It's Feedback Time", color: Color.gray)
+                            }
+                            
+                        }.disabled(!isEnded)
+                    }                }
+                    .animation(.easeInOut, value: isEnded)
             }
         }
+        
+    }
 }
 
 struct FortuneWheelView_Previews: PreviewProvider {
     static var previews: some View {
-        FortuneWheelView()
+        FortuneWheelView(players: ["KD", "Geraldy", "CC", "Vicky", "Ricky"])
     }
 }
