@@ -10,11 +10,12 @@ import SwiftUI
 struct HomeView: View {
     @State private var counter = 1
     @State private var names : [String] = [""]
+    
     @StateObject var cdm = CoreDataModel()
     var body: some View {
         NavigationView {
             ZStack{
-                Color("background")
+                Color("Purple")
                     .ignoresSafeArea()
                 VStack(alignment: .leading){
                     Text("Welcome")
@@ -33,21 +34,26 @@ struct HomeView: View {
                                 names.remove(atOffsets: indexSet)
                                 counter -= 1
                             }
-                            Button{
-                                if counter <= 3 {
-                                    withAnimation{
-                                        names.append("")
-                                        counter += 1
+                            if counter != 4{
+                                withAnimation{
+                                    Button{
+                                        if counter <= 3 {
+                                            withAnimation{
+                                                names.append("")
+                                                counter += 1
+                                            }
+                                        }
+                                    }label: {
+                                        HStack{
+                                            Image(systemName: "plus.circle")
+                                                .foregroundColor(Color("Purple"))
+                                            Text("Add Player")
+                                                .foregroundColor(Color("Purple"))
+                                        }
                                     }
                                 }
-                            }label: {
-                                HStack{
-                                    Image(systemName: "plus.circle")
-                                        .foregroundColor(Color("purple"))
-                                    Text("Add Player")
-                                        .foregroundColor(Color("purple"))
-                                }
                             }
+                            
                         }
                     }
                     .padding(.top, -25.0)
