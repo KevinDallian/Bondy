@@ -11,6 +11,7 @@
 		3F5E83DB29F136AA00BFB344 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E83DA29F136AA00BFB344 /* ContentView.swift */; };
 		3F5E83DD29F136AB00BFB344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DC29F136AB00BFB344 /* Assets.xcassets */; };
 		3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */; };
+		3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E847D29FA2FC000BFB344 /* RuleView.swift */; };
 		3F5E842429F3A84500BFB344 /* TestPageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E842329F3A84500BFB344 /* TestPageFile.swift */; };
 		3F5E842829F3AEF200BFB344 /* TestPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E842729F3AEF200BFB344 /* TestPageView.swift */; };
 		3F5E847E29FA2FC000BFB344 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */; };
@@ -33,6 +34,7 @@
 		3F5E83DA29F136AA00BFB344 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F5E83DC29F136AB00BFB344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F5E847D29FA2FC000BFB344 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		3F5E842329F3A84500BFB344 /* TestPageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageFile.swift; sourceTree = "<group>"; };
 		3F5E842729F3AEF200BFB344 /* TestPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageView.swift; sourceTree = "<group>"; };
 		3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		D8695E8029FBC88E008C68F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F5E847D29FA2FC000BFB344 /* RuleView.swift */,
 				D8695E8329FC19B8008C68F5 /* Components */,
 				3F5E847D29FA2FC000BFB344 /* OnBoardingView.swift */,
 				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
@@ -239,7 +242,7 @@
 				D8695E7F29FBA5B6008C68F5 /* FortuneWheelView.swift in Sources */,
 				3F5E842829F3AEF200BFB344 /* TestPageView.swift in Sources */,
 				3F5E83DB29F136AA00BFB344 /* ContentView.swift in Sources */,
-				3F5E847E29FA2FC000BFB344 /* OnBoardingView.swift in Sources */,
+				3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				D8695E8529FC19D1008C68F5 /* ButtonView.swift in Sources */,
