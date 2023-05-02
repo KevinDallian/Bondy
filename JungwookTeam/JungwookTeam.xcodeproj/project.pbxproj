@@ -22,6 +22,7 @@
 		D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41332A010CAA0014D154 /* ButtonView.swift */; };
 		D8DE41362A010DE30014D154 /* FortuneWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41352A010DE30014D154 /* FortuneWheelView.swift */; };
 		D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41372A010E590014D154 /* FeedbackView.swift */; };
+		D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41392A01230C0014D154 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D8DE41332A010CAA0014D154 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D8DE41352A010DE30014D154 /* FortuneWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneWheelView.swift; sourceTree = "<group>"; };
 		D8DE41372A010E590014D154 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		D8DE41392A01230C0014D154 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
 				D8DE41352A010DE30014D154 /* FortuneWheelView.swift */,
 				D8DE41372A010E590014D154 /* FeedbackView.swift */,
+				D8DE41392A01230C0014D154 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				3F5E83DB29F136AA00BFB344 /* ContentView.swift in Sources */,
 				3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */,
 				D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */,
+				D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				D8DE41362A010DE30014D154 /* FortuneWheelView.swift in Sources */,

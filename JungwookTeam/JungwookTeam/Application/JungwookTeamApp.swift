@@ -11,7 +11,7 @@ import SwiftUI
 struct JungwookTeamApp: App {
     var body: some Scene {
         WindowGroup {
-            FortuneWheelView(players: ["CC", "KD", "Vicky", "Ricky", "Geraldy"])
+            FortuneWheelView(players: ["CC", "KD", "Vicky"])
         }
     }
 }

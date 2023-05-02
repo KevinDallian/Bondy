@@ -48,9 +48,11 @@ struct FortuneWheelView: View {
                     }label: {
                         if isEnded{
                             ButtonView(title: "It's Feedback Time")
+                                .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
                                 
                         }else{
                             ButtonView(title: "It's Feedback Time", color: Color.gray)
+                                .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
                         }
                         
                     }.disabled(!isEnded)
