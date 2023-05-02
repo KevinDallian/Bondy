@@ -22,7 +22,7 @@ struct ButtonView: View {
             .frame(width: 284, height: 49)
             .foregroundColor(.white)
             .background(color)
-            .cornerRadius(5)
+            .cornerRadius(7)
     }
 }
 
