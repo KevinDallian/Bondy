@@ -20,21 +20,24 @@ struct FortuneWheelView: View {
                     .foregroundColor(Color("Purple"))
                     .ignoresSafeArea()
                 VStack{
+                    Spacer()
                     Text("Shuffle Feedback Player")
                         .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .offset(y: -20)
-                        .padding(.vertical, 30)
-                    Text("Roll the roullete to choose player")
+                        .padding([.top, .horizontal], 30)
+                    Text("Scroll the wheel to choose player")
                         .font(.title2)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
-                        .padding(.bottom, 30)
+                    Spacer()
                     if isEnded{
                         Text("\(players[selectedIndex])")
                             .font(.largeTitle.weight(.bold))
                             .foregroundColor(.white)
+                            .frame(height: 300)
+                            .offset(y: -20)
                     }else{
                         FortuneWheel(titles: players, size: 300) { i in
                             selectedIndex = i
@@ -42,26 +45,26 @@ struct FortuneWheelView: View {
                         }
                     }
                     Spacer()
-                    
-                    NavigationLink{
-                        FeedbackView(player: players[selectedIndex])
-                    }label: {
-                        if isEnded{
-                            ButtonView(title: "It's Feedback Time")
-                                .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
-                                
-                        }else{
-                            ButtonView(title: "It's Feedback Time", color: Color.gray)
-                                .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
-                        }
-                        
-                    }.disabled(!isEnded)
-                        
-                }.padding()
+                    ZStack{
+                        Color("DarkPurple")
+                            .ignoresSafeArea()
+                        NavigationLink{
+                            FeedbackView(player: players[selectedIndex], promptType: "feedback")
+                        }label: {
+                            if isEnded{
+                                ButtonView(title: "It's Feedback Time")
+                                    .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
+                                    
+                            }else{
+                                ButtonView(title: "It's Feedback Time", color: Color.gray)
+                                    .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
+                            }
+                        }.disabled(!isEnded)
+                    }.frame(height: 125)
+                }
                     .animation(.easeInOut, value: isEnded)
             }
         }
-        
     }
 }
 

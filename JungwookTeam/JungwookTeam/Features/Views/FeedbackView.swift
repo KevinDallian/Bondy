@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedbackView: View {
     let player : String
+    let promptType : String
     var body: some View {
         NavigationView{
             ZStack{
@@ -19,25 +20,34 @@ struct FeedbackView: View {
                     Text("Feedback Time!")
                         .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
-                    Text("Here are some hints that can help you discuss for your sharing time!")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 30.0)
+                    Text("Here are some hints that can help you give feedback for your storyteller!")
                         .font(.body)
                         .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 30.0)
                     Spacer()
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 315, height: 361)
-                            .foregroundColor(Color("backgroundButton"))
-                        VStack(spacing: 10){
-                            // static - change later
-                            Text("1. Prompt question")
-                            Text("2. Prompt question")
-                            Text("3. Prompt question")
-                        }.background(RoundedRectangle(cornerRadius: 10)
-                            .fill(.white)
+                            .foregroundColor(Color("DarkPurple"))
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color("LightPurple"))
                             .frame(width: 285.73, height: 337.19)
-                        )
+                        VStack(alignment: .leading, spacing: 12){
+                            if promptType == "feedback"{
+                                Text("1. How you feel after hearing their stories? Please explain it!")
+                                Text("2. Do their stories meet your expectations? Please describe why!")
+                                Text("3. What are the new things you learn after hearing their stories?")
+                            
+                            }else if promptType == "storyteller"{
+                                Text("1. How you feel after hearing their feedback? Please explain it!")
+                                Text("2. Do their stories meet your expectations? Please describe why!")
+                                Text("3. What are the new things you learn after hearing their feedback?")
+                            }
+                        }.offset(y: -60)
+                        .frame(width: 270)
                     }
                     Spacer()
                     ZStack{
@@ -46,7 +56,7 @@ struct FeedbackView: View {
                             .ignoresSafeArea()
                             .frame(height: 125)
                         VStack{
-                            Text("\(player)")
+                            Text("\(player) turn")
                                 .foregroundColor(.white)
                                 .textCase(.uppercase)
                                 .font(.title2.weight(.bold))
@@ -74,6 +84,6 @@ struct FeedbackView: View {
 
 struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView(player: "Player 2")
+        FeedbackView(player: "Player 2", promptType: "feedback")
     }
 }
