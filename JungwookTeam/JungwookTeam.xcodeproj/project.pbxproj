@@ -19,6 +19,7 @@
 		D8695E7D29FBA59C008C68F5 /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = D8695E7C29FBA59C008C68F5 /* FortuneWheel */; };
 		D87C249729FAB3F9003005EE /* 3SecTimer.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249629FAB3F9003005EE /* 3SecTimer.json */; };
 		D87C249929FAB90A003005EE /* Clap.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249829FAB90A003005EE /* Clap.json */; };
+		D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41332A010CAA0014D154 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		D87C249629FAB3F9003005EE /* 3SecTimer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3SecTimer.json; sourceTree = "<group>"; };
 		D87C249829FAB90A003005EE /* Clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Clap.json; sourceTree = "<group>"; };
+		D8DE41332A010CAA0014D154 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +105,7 @@
 		3F5E84BD29FC266400BFB344 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3F5E84BF29FC267D00BFB344 /* Constant */,
 				3F5E84C029FC268400BFB344 /* Resources */,
-				3F5E84C129FC268D00BFB344 /* Utility */,
-				3F5E84C229FC26A700BFB344 /* Themes */,
-				3F5E84C329FC26B000BFB344 /* Extension */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -115,17 +113,11 @@
 		3F5E84BE29FC266F00BFB344 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D8DE41322A010C9D0014D154 /* Components */,
 				D8695E6D29FB8F9C008C68F5 /* Model */,
 				D8695E8029FBC88E008C68F5 /* Views */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		3F5E84BF29FC267D00BFB344 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constant;
 			sourceTree = "<group>";
 		};
 		3F5E84C029FC268400BFB344 /* Resources */ = {
@@ -135,27 +127,6 @@
 				3F5E842229F3A28F00BFB344 /* Assets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		3F5E84C129FC268D00BFB344 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		3F5E84C229FC26A700BFB344 /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Themes;
-			sourceTree = "<group>";
-		};
-		3F5E84C329FC26B000BFB344 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		3F5E84C429FC271200BFB344 /* Animation */ = {
@@ -200,6 +171,14 @@
 				D87C249629FAB3F9003005EE /* 3SecTimer.json */,
 			);
 			path = LottieJSON;
+			sourceTree = "<group>";
+		};
+		D8DE41322A010C9D0014D154 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D8DE41332A010CAA0014D154 /* ButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +267,7 @@
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				D8695E7229FB9C67008C68F5 /* CoreDataModel.swift in Sources */,
 				D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */,
+				D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
