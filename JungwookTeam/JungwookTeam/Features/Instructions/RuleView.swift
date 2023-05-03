@@ -30,31 +30,30 @@ struct RuleView: View {
                             .cornerRadius(13)
                             .frame(width: 365, height: 658)
                         VStack{
-                            ScrollView(.vertical, showsIndicators: true, content: {
-                                LazyVStack(alignment: .leading, spacing: 12){
-                                    ForEach(ruleText) { text in
-                                        Text(text.text)
-                                            .padding([.top, .leading, .trailing],8)
-                                            .padding(.bottom, 5)
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color("BackgroundText"))
+                                    .frame(width: 330, height: 560)
+                                ScrollView(.vertical, showsIndicators: true, content: {
+                                    LazyVStack(alignment: .leading, spacing: 12){
+                                        ForEach(ruleText) { text in
+                                            Text(text.text)
+                                                .padding([.top, .leading, .trailing],8)
+                                                .padding(.bottom, 5)
+                                        }
                                     }
-                                }
-                                .background(Color("BackgroundText"))
-                                .font(.system(size: 16))
-                                .foregroundColor(.black)
-                                .frame(width: 330)
-                            })
-                            .padding([.top, .bottom], 15)
-                            
-                            Button {
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.black)
+                                    .frame(width: 330)
+                                })
+                                .padding([.top, .bottom], 15)
+                            }
+                            NavigationLink {
                                 
                             } label: {
-                                Text("Play")
-                                    .frame(width: 320, height: 49)
-                                    .foregroundColor(.white)
-                                    .background(Color("Aqua"))
-                                    .cornerRadius(7)
-                                    .padding(.bottom, 18)
+                                ButtonView(title: "START")
                             }
+                            Spacer()
                         }
                     }
                    

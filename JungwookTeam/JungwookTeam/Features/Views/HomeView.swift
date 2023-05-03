@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var counter = 1
-    @State private var names : [String] = [""]
-    
-    @StateObject var cdm = CoreDataModel()
+    @State private var counter = 2
+    @State var names : [String] = ["", ""]
+    @State var showingNextView = false
+    @StateObject var gameModel = GameModel()
     var body: some View {
         NavigationView {
             ZStack{
@@ -21,15 +21,19 @@ struct HomeView: View {
                     Text("Welcome")
                         .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
+                    Text("Let's play with 2 - 4 people!")
+                        .font(.title2.weight(.bold))
+                        .foregroundColor(.white)
                     Spacer()
                     Text("Insert player name,")
-                        .font(.title.weight(.bold))
+                        .font(.title3.weight(.bold))
                         .foregroundColor(.white)
                         .padding(.horizontal, 20.0)
                     Form{
                         Section{
                             ForEach(0 ..< counter, id: \.self) { index in
                                 TextField("Name", text: self.$names[index])
+                                    .disableAutocorrection(true)
                             }.onDelete { indexSet in
                                 names.remove(atOffsets: indexSet)
                                 counter -= 1
@@ -53,7 +57,6 @@ struct HomeView: View {
                                     }
                                 }
                             }
-                            
                         }
                     }
                     .padding(.top, -25.0)
@@ -63,18 +66,23 @@ struct HomeView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        NavigationLink{
-                            // link ke StoryView
+                        Button{
+                            gameModel.initializeGame(names: names)
+                            showingNextView = true
                         }label: {
                             ButtonView(title: "Start")
                         }
                         Spacer()
+                    }
+                    NavigationLink(destination: TestView(gameModel: gameModel), isActive: $showingNextView) {
+                        EmptyView()
                     }
                     
                 }.padding()
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

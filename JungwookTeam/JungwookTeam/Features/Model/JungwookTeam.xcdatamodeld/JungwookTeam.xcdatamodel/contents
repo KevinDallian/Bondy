@@ -7,6 +7,7 @@
     </entity>
     <entity name="PlayerEntity" representedClassName="PlayerEntity" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="storyTime" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="player" inverseEntity="CardEntity"/>
     </entity>
 </model>
