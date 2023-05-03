@@ -14,40 +14,42 @@ struct OnBoardingView: View {
     private let dotApperance = UIPageControl.appearance()
     
     var body: some View{
-        ZStack{
-            Color("Purple").ignoresSafeArea()
-            VStack{
-                TabView(selection: $pageIndex){
-                    ForEach(onBoardingPages) { page in
-                        VStack{
-                            Spacer()
-                            OnBoardingPageView(onBoardingItem: page)
+        NavigationView{
+            ZStack{
+                Color("Purple").ignoresSafeArea()
+                VStack{
+                    TabView(selection: $pageIndex){
+                        ForEach(onBoardingPages) { page in
+                            VStack{
+                                Spacer()
+                                OnBoardingPageView(onBoardingItem: page)
+                            }
+                            .tag(page.tag)
                         }
-                        .tag(page.tag)
                     }
+                    .tabViewStyle(.page)
+                    
+                    if pageIndex == onBoardingPages.count - 1{
+                        NavigationLink {
+                            HomeView()
+                        } label: {
+                            ButtonView(title: "START")
+                        }
+                    } else {
+                        Button {
+                            increamentPage()
+                        } label: {
+                            Text("NEXT")
+                                .frame(width: 284, height: 49)
+                                .background(Color("Purple"))
+                                .font(.system(size: 21))
+                                .multilineTextAlignment(.center)
+                                .cornerRadius(7)
+                                .foregroundColor(Color("Purple"))
+                        }
+                    }
+                    
                 }
-                .tabViewStyle(.page)
-                
-                if pageIndex == onBoardingPages.count - 1{
-                    Button {
-                        
-                    } label: {
-                        ButtonView(title: "START")
-                    }
-                } else {
-                    Button {
-                        increamentPage()
-                    } label: {
-                        Text("NEXT")
-                            .frame(width: 284, height: 49)
-                            .background(Color("Aqua"))
-                            .font(.system(size: 21))
-                            .multilineTextAlignment(.center)
-                            .cornerRadius(7)
-                            .foregroundColor(.white)
-                    }
-                }
-                
             }
         }
     }

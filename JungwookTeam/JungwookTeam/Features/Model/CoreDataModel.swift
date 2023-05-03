@@ -63,6 +63,7 @@ class CoreDataModel : ObservableObject{
     func addPlayer(name: String){
         let player = PlayerEntity(context: context)
         player.name = name
+        player.storyTime = false
         for _ in 0...3{
             let card = cards.randomElement()!
             player.addToCards(card)

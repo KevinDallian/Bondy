@@ -69,6 +69,6 @@ struct FortuneWheelView: View {
 
 struct FortuneWheelView_Previews: PreviewProvider {
     static var previews: some View {
-        FortuneWheelView(players: ["KD", "Geraldy", "CC", "Vicky", "Ricky"])
+        FortuneWheelView(players: ["KD", "CC", "Vicky", "Ricky"])
     }
 }
