@@ -15,6 +15,7 @@ struct CardView: View {
         GridItem(.adaptive(minimum: 120))
     ]
     
+    @State private var cardPulse: CGFloat = 1
     @State private var isTapped: Bool = false
     
     var body: some View{
@@ -28,15 +29,47 @@ struct CardView: View {
                     .bold()
                 
                 if !isTapped {
-                    Text("asdfsdfsd")
-            Spacer()
+
+                    Text("Tap to shuffle a card")
+                        .font(.system(size: 14))
+                        .foregroundColor(.white)
+                        .padding(.top, 20)
+                    
+                    Button {
+                        isTapped.toggle()
+                    } label: {
+                        Image("deck")
+                            .resizable()
+                            .frame(width: 268, height: 359)
+                            .position(x: 200, y: 251)
+                            .shadow(color: .purple, radius: 6)
+                    }
+                    .scaleEffect(cardPulse)
+                    .animation(
+                        .easeIn(duration: 1.5)
+                        .repeatForever(autoreverses: true), value: cardPulse)
+                    .onAppear{
+                        cardPulse *= 1.02
+                    }
+                    
+                    ZStack{
+                        Color("DarkPurple").ignoresSafeArea()
+                        VStack{
+                            Text("PLAYER 1")
+                                .padding(.top, 30)
+                                .font(.system(size: 21))
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    .frame(height: 81)
                 } else {
                     ZStack{
                         Color("DarkPurple")
                         VStack{
                             Text("Prompt Storytelling")
                                 .font(.system(size: 14))
-                                .frame(width: 303, height: 27)
+                                .frame(width: 373, height: 27)
                                 .background(.white)
                             
                             Text("What reminds you of your other player?")
@@ -48,7 +81,7 @@ struct CardView: View {
                         .multilineTextAlignment(.center)
                     }
                     .padding()
-                    .frame(width: 303, height:60)
+                    .frame(width: 339, height:60)
                     .cornerRadius(8)
                     
                     LazyVGrid(columns: adaptiveColumn, spacing: 10){
@@ -92,6 +125,7 @@ struct CardView: View {
                     }
                 }
             }
+            .animation(.easeInOut(duration: 1.2), value: isTapped)
         }
     }
 }
