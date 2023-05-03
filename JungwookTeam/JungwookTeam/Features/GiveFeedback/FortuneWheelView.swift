@@ -16,8 +16,7 @@ struct FortuneWheelView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Rectangle()
-                    .foregroundColor(Color("Purple"))
+                Color("Purple")
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
