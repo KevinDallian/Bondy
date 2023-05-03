@@ -19,6 +19,11 @@
 		D8695E7D29FBA59C008C68F5 /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = D8695E7C29FBA59C008C68F5 /* FortuneWheel */; };
 		D87C249729FAB3F9003005EE /* 3SecTimer.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249629FAB3F9003005EE /* 3SecTimer.json */; };
 		D87C249929FAB90A003005EE /* Clap.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249829FAB90A003005EE /* Clap.json */; };
+		D8A8A3982A023A11006D3689 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3972A023A11006D3689 /* CardView.swift */; };
+		D8A8A39B2A023A6C006D3689 /* RuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A39A2A023A6C006D3689 /* RuleViewModel.swift */; };
+		D8A8A3A02A023BD0006D3689 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A39F2A023BD0006D3689 /* OnBoardingModel.swift */; };
+		D8A8A3A22A023BEC006D3689 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A12A023BEC006D3689 /* OnBoardingPageView.swift */; };
+		D8A8A3A42A023C01006D3689 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A32A023C01006D3689 /* OnBoardingView.swift */; };
 		D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41332A010CAA0014D154 /* ButtonView.swift */; };
 		D8DE41362A010DE30014D154 /* FortuneWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41352A010DE30014D154 /* FortuneWheelView.swift */; };
 		D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41372A010E590014D154 /* FeedbackView.swift */; };
@@ -37,6 +42,11 @@
 		D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		D87C249629FAB3F9003005EE /* 3SecTimer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3SecTimer.json; sourceTree = "<group>"; };
 		D87C249829FAB90A003005EE /* Clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Clap.json; sourceTree = "<group>"; };
+		D8A8A3972A023A11006D3689 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D8A8A39A2A023A6C006D3689 /* RuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewModel.swift; sourceTree = "<group>"; };
+		D8A8A39F2A023BD0006D3689 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		D8A8A3A12A023BEC006D3689 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
+		D8A8A3A32A023C01006D3689 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		D8DE41332A010CAA0014D154 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D8DE41352A010DE30014D154 /* FortuneWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneWheelView.swift; sourceTree = "<group>"; };
 		D8DE41372A010E590014D154 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -119,6 +129,10 @@
 		3F5E84BE29FC266F00BFB344 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D8A8A39E2A023BC0006D3689 /* onBoarding */,
+				D8A8A39D2A023B12006D3689 /* GiveFeedback */,
+				D8A8A39C2A023AEA006D3689 /* TellStory */,
+				D8A8A3992A023A58006D3689 /* Instructions */,
 				D8DE41322A010C9D0014D154 /* Components */,
 				D8695E6D29FB8F9C008C68F5 /* Model */,
 				D8695E8029FBC88E008C68F5 /* Views */,
@@ -164,10 +178,7 @@
 		D8695E8029FBC88E008C68F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3F5E847D29FA2FC000BFB344 /* RuleView.swift */,
 				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
-				D8DE41352A010DE30014D154 /* FortuneWheelView.swift */,
-				D8DE41372A010E590014D154 /* FeedbackView.swift */,
 				D8DE41392A01230C0014D154 /* HomeView.swift */,
 			);
 			path = Views;
@@ -180,6 +191,42 @@
 				D87C249629FAB3F9003005EE /* 3SecTimer.json */,
 			);
 			path = LottieJSON;
+			sourceTree = "<group>";
+		};
+		D8A8A3992A023A58006D3689 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				D8A8A39A2A023A6C006D3689 /* RuleViewModel.swift */,
+				3F5E847D29FA2FC000BFB344 /* RuleView.swift */,
+			);
+			path = Instructions;
+			sourceTree = "<group>";
+		};
+		D8A8A39C2A023AEA006D3689 /* TellStory */ = {
+			isa = PBXGroup;
+			children = (
+				D8A8A3972A023A11006D3689 /* CardView.swift */,
+			);
+			path = TellStory;
+			sourceTree = "<group>";
+		};
+		D8A8A39D2A023B12006D3689 /* GiveFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				D8DE41352A010DE30014D154 /* FortuneWheelView.swift */,
+				D8DE41372A010E590014D154 /* FeedbackView.swift */,
+			);
+			path = GiveFeedback;
+			sourceTree = "<group>";
+		};
+		D8A8A39E2A023BC0006D3689 /* onBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				D8A8A39F2A023BD0006D3689 /* OnBoardingModel.swift */,
+				D8A8A3A12A023BEC006D3689 /* OnBoardingPageView.swift */,
+				D8A8A3A32A023C01006D3689 /* OnBoardingView.swift */,
+			);
+			path = onBoarding;
 			sourceTree = "<group>";
 		};
 		D8DE41322A010C9D0014D154 /* Components */ = {
@@ -271,14 +318,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5E83DB29F136AA00BFB344 /* ContentView.swift in Sources */,
+				D8A8A3A02A023BD0006D3689 /* OnBoardingModel.swift in Sources */,
 				3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */,
+				D8A8A3A42A023C01006D3689 /* OnBoardingView.swift in Sources */,
 				D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */,
 				D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
+				D8A8A39B2A023A6C006D3689 /* RuleViewModel.swift in Sources */,
 				D8DE41362A010DE30014D154 /* FortuneWheelView.swift in Sources */,
 				D8695E7229FB9C67008C68F5 /* CoreDataModel.swift in Sources */,
 				D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */,
+				D8A8A3982A023A11006D3689 /* CardView.swift in Sources */,
+				D8A8A3A22A023BEC006D3689 /* OnBoardingPageView.swift in Sources */,
 				D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

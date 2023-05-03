@@ -76,8 +76,6 @@ struct FeedbackView: View {
                 }
             }
         }
-        
-        
             .navigationBarBackButtonHidden(true)
     }
 }
