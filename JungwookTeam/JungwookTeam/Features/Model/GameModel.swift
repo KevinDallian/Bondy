@@ -74,7 +74,9 @@ class GameModel : ObservableObject{
     func initializeGame(names: [String]){
         for name in names {
             var player = Player(name: name)
-            var cardsToRandom = cards
+            var cardsToRandom = cards.filter { card in
+                card.name != "Card Back"
+            }
             for _ in 0...3 {
                 let card = cardsToRandom.randomElement()!
                 player.addCard(card: card)

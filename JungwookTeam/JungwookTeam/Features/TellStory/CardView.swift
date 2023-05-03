@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CardView: View {
     
-    private var data: [String] = ["Ball", "Cat", "Butterfly", "CardBack"]
+    @StateObject var gameModel : GameModel
+    let player : Player
     
-    private let adaptiveColumn = [
+    let adaptiveColumn = [
         GridItem(.adaptive(minimum: 120))
     ]
     
@@ -54,7 +55,7 @@ struct CardView: View {
                     ZStack{
                         Color("DarkPurple").ignoresSafeArea()
                         VStack{
-                            Text("PLAYER 1")
+                            Text("\(player.name)")
                                 .padding(.top, 30)
                                 .font(.system(size: 21))
                                 .fontWeight(.heavy)
@@ -84,9 +85,9 @@ struct CardView: View {
                     .cornerRadius(8)
                     
                     LazyVGrid(columns: adaptiveColumn, spacing: 10){
-                        ForEach(data, id: \.self){ number in
+                        ForEach(player.cards, id: \.self){ card in
                             ZStack{
-                                Image(number)
+                                Image(card.image ?? "CardBack")
                                     .resizable()
                                     .frame(width: 161, height: 220)
                             }
@@ -98,7 +99,7 @@ struct CardView: View {
                     ZStack{
                         Color("DarkPurple").ignoresSafeArea()
                         VStack{
-                            Text("PLAYER 1")
+                            Text("\(player.name)")
                                 .font(.system(size: 21))
                                 .fontWeight(.heavy)
                                 .foregroundColor(.white)
@@ -126,13 +127,7 @@ struct CardView: View {
             }
             .animation(.easeInOut(duration: 1.2), value: isTapped)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
-
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView()
-    }
-}

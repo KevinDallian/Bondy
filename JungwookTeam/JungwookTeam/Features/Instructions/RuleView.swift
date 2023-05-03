@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct RuleView: View {
-    
-    private var ruleText: [RuleViewModel] = RuleViewModel.ruleViewText
+
+    @StateObject var gameModel : GameModel
+    var ruleText: [RuleViewModel] = RuleViewModel.ruleViewText
     
     var body: some View{
         NavigationView{
@@ -49,7 +50,7 @@ struct RuleView: View {
                                 .padding([.top, .bottom], 15)
                             }
                             NavigationLink {
-                                
+                                CardView(gameModel: gameModel, player: gameModel.choosePlayerTurn())
                             } label: {
                                 ButtonView(title: "START")
                             }
@@ -62,11 +63,12 @@ struct RuleView: View {
                 .padding()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct RuleView_Previews: PreviewProvider {
     static var previews: some View {
-        RuleView()
+        RuleView(gameModel: GameModel())
     }
 }

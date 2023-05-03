@@ -76,7 +76,7 @@ struct HomeView: View {
                     }
                 }.padding()
                     .navigationDestination(isPresented: $showingNextView) {
-                        TestView(gameModel: gameModel)
+                        RuleView(gameModel: gameModel)
                     }
             }
             
