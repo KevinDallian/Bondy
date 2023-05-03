@@ -9,11 +9,13 @@ import Foundation
 
 struct Player : Hashable{
     var name: String
+    var hasPlayed: Bool
     var cards : [CardEntity]
     
     init(name : String){
         self.name = name
         self.cards = []
+        self.hasPlayed = false
     }
     
     mutating func addCard(card: CardEntity){

@@ -75,17 +75,25 @@ class GameModel : ObservableObject{
         for name in names {
             var player = Player(name: name)
             var cardsToRandom = cards
-            for _ in 0...3{
+            for _ in 0...3 {
                 let card = cardsToRandom.randomElement()!
                 player.addCard(card: card)
-                let cardIndex = cardsToRandom.index(of: card) ?? 1
+                let cardIndex = cardsToRandom.firstIndex(of: card) ?? 1
                 cardsToRandom.remove(at: cardIndex)
             }
             players.append(player)
         }
+        players.shuffle()
     }
     
     func resetGame(){
         players.removeAll()
+    }
+    
+    func choosePlayerTurn() -> Player {
+        let player = players.first { player in
+            player.hasPlayed == false
+        }!
+        return player
     }
 }

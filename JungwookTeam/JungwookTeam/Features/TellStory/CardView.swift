@@ -25,11 +25,10 @@ struct CardView: View {
                 Text("Tell us your story!")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .font(.system(size: 30))
+                    .font(.largeTitle)
                     .bold()
                 
                 if !isTapped {
-
                     Text("Tap to shuffle a card")
                         .font(.system(size: 14))
                         .foregroundColor(.white)
@@ -38,7 +37,7 @@ struct CardView: View {
                     Button {
                         isTapped.toggle()
                     } label: {
-                        Image("deck")
+                        Image("Deck")
                             .resizable()
                             .frame(width: 268, height: 359)
                             .position(x: 200, y: 251)
@@ -72,7 +71,7 @@ struct CardView: View {
                                 .frame(width: 373, height: 27)
                                 .background(.white)
                             
-                            Text("What reminds you of your other player?")
+                            Text("Make a story with all cards about what reminds you of other players")
                                 .font(.system(size: 14))
                                 .frame(width: 303, height: 40)
                                 .foregroundColor(.white)

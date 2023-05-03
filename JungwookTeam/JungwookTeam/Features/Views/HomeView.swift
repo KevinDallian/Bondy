@@ -13,7 +13,7 @@ struct HomeView: View {
     @State var showingNextView = false
     @StateObject var gameModel = GameModel()
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack{
                 Color("Purple")
                     .ignoresSafeArea()
@@ -74,14 +74,14 @@ struct HomeView: View {
                         }
                         Spacer()
                     }
-                    NavigationLink(destination: TestView(gameModel: gameModel), isActive: $showingNextView) {
-                        EmptyView()
-                    }
-                    
                 }.padding()
-                
+                    .navigationDestination(isPresented: $showingNextView) {
+                        TestView(gameModel: gameModel)
+                    }
             }
+            
         }
+        
         .navigationBarBackButtonHidden(true)
     }
 }
