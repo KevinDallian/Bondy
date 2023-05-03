@@ -12,12 +12,11 @@ struct FortuneWheelView: View {
     var players : [String]
     @State var selectedIndex = 0
     @State var isEnded = false
-        
+    
     var body: some View {
         NavigationView{
             ZStack{
-                Rectangle()
-                    .foregroundColor(Color("Purple"))
+                Color("Purple")
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
@@ -54,7 +53,7 @@ struct FortuneWheelView: View {
                             if isEnded{
                                 ButtonView(title: "It's Feedback Time")
                                     .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
-                                    
+                                
                             }else{
                                 ButtonView(title: "It's Feedback Time", color: Color.gray)
                                     .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
@@ -62,7 +61,7 @@ struct FortuneWheelView: View {
                         }.disabled(!isEnded)
                     }.frame(height: 125)
                 }
-                    .animation(.easeInOut, value: isEnded)
+                .animation(.easeInOut, value: isEnded)
             }
         }
     }

@@ -13,7 +13,7 @@ struct ContentView: View {
             ZStack{
                 Color("Purple").ignoresSafeArea()
                 VStack{
-                   RuleView()
+                Text("dsadasa")
                 }
             }
         }

@@ -28,7 +28,7 @@ struct CardView: View {
                     .bold()
                 
                 if !isTapped {
-                    Text("asd")
+                    Text("asdfsdfsd")
             Spacer()
                 } else {
                     ZStack{
