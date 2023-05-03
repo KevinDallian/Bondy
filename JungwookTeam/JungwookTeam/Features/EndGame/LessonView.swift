@@ -66,14 +66,11 @@ struct LessonView: View {
                     Spacer()
                     
                 ZStack{
-                    Button (""){
+                    Button{
+                        
+                    }label:{
+                        ButtonView(title: "GO TO HOME PAGE")
                     }
-                    .buttonStyle(GreenButton())
-                    Text("GO TO HOME PAGE")
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding()
                 }
                 Spacer()
                 }

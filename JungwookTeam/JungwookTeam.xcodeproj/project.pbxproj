@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FFF6EDA2A0270DB0023CB5E /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF6ED92A0270DB0023CB5E /* LessonView.swift */; };
 		3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E83D829F136AA00BFB344 /* JungwookTeamApp.swift */; };
 		3F5E83DD29F136AB00BFB344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DC29F136AB00BFB344 /* Assets.xcassets */; };
 		3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */; };
@@ -25,6 +24,7 @@
 		D8A8A3A42A023C01006D3689 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A32A023C01006D3689 /* OnBoardingView.swift */; };
 		D8A8A3A72A023F4C006D3689 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A62A023F4C006D3689 /* CardView.swift */; };
 		D8A8A3A92A024D9D006D3689 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A82A024D9D006D3689 /* GameModel.swift */; };
+		D8B8B4A62A027D6E0002963F /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B4A52A027D6E0002963F /* LessonView.swift */; };
 		D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41332A010CAA0014D154 /* ButtonView.swift */; };
 		D8DE41362A010DE30014D154 /* FortuneWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41352A010DE30014D154 /* FortuneWheelView.swift */; };
 		D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41372A010E590014D154 /* FeedbackView.swift */; };
@@ -34,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2FFF6ED92A0270DB0023CB5E /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		3F5E83D529F136AA00BFB344 /* JungwookTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JungwookTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5E83D829F136AA00BFB344 /* JungwookTeamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JungwookTeamApp.swift; sourceTree = "<group>"; };
 		3F5E83DC29F136AB00BFB344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		D8A8A3A32A023C01006D3689 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		D8A8A3A62A023F4C006D3689 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D8A8A3A82A024D9D006D3689 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		D8B8B4A52A027D6E0002963F /* LessonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		D8DE41332A010CAA0014D154 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D8DE41352A010DE30014D154 /* FortuneWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneWheelView.swift; sourceTree = "<group>"; };
 		D8DE41372A010E590014D154 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 		3F5E84BE29FC266F00BFB344 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D8B8B4A72A027D770002963F /* EndGame */,
 				D8A8A3A52A023F42006D3689 /* TellStory */,
 				D8A8A39E2A023BC0006D3689 /* onBoarding */,
 				D8A8A39D2A023B12006D3689 /* GiveFeedback */,
@@ -237,6 +238,14 @@
 			path = TellStory;
 			sourceTree = "<group>";
 		};
+		D8B8B4A72A027D770002963F /* EndGame */ = {
+			isa = PBXGroup;
+			children = (
+				D8B8B4A52A027D6E0002963F /* LessonView.swift */,
+			);
+			path = EndGame;
+			sourceTree = "<group>";
+		};
 		D8DE41322A010C9D0014D154 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +336,7 @@
 			files = (
 				D8A8A3A02A023BD0006D3689 /* OnBoardingModel.swift in Sources */,
 				3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */,
+				D8B8B4A62A027D6E0002963F /* LessonView.swift in Sources */,
 				D8A8A3A42A023C01006D3689 /* OnBoardingView.swift in Sources */,
 				D8A8A3A72A023F4C006D3689 /* CardView.swift in Sources */,
 				D8E6A02E2A02551700A7895F /* Player.swift in Sources */,
@@ -334,7 +344,6 @@
 				D8A8A3A92A024D9D006D3689 /* GameModel.swift in Sources */,
 				D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */,
 				D8E6A0302A02602A00A7895F /* TestView.swift in Sources */,
-				2FFF6EDA2A0270DB0023CB5E /* LessonView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				D8A8A39B2A023A6C006D3689 /* RuleViewModel.swift in Sources */,
