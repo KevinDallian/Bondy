@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FFF6EDA2A0270DB0023CB5E /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF6ED92A0270DB0023CB5E /* LessonView.swift */; };
 		3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E83D829F136AA00BFB344 /* JungwookTeamApp.swift */; };
 		3F5E83DB29F136AA00BFB344 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E83DA29F136AA00BFB344 /* ContentView.swift */; };
 		3F5E83DD29F136AB00BFB344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DC29F136AB00BFB344 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FFF6ED92A0270DB0023CB5E /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		3F5E83D529F136AA00BFB344 /* JungwookTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JungwookTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5E83D829F136AA00BFB344 /* JungwookTeamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JungwookTeamApp.swift; sourceTree = "<group>"; };
 		3F5E83DA29F136AA00BFB344 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				3F5E847D29FA2FC000BFB344 /* RuleView.swift */,
 				3F5E83DA29F136AA00BFB344 /* ContentView.swift */,
+				2FFF6ED92A0270DB0023CB5E /* LessonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				3F5E83DB29F136AA00BFB344 /* ContentView.swift in Sources */,
 				3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */,
+				2FFF6EDA2A0270DB0023CB5E /* LessonView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
 				D8695E7229FB9C67008C68F5 /* CoreDataModel.swift in Sources */,
