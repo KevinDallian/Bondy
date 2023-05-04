@@ -13,7 +13,11 @@
 		3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */; };
 		3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E847D29FA2FC000BFB344 /* RuleView.swift */; };
 		874A386C2A011FB80006DF92 /* BackgroundMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */; };
-		874A38702A0120DE0006DF92 /* chimes-7035.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 874A386F2A0120DE0006DF92 /* chimes-7035.mp3 */; };
+		875F3F5E2A0258AC006C6F29 /* claps-44774.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F5D2A0258AC006C6F29 /* claps-44774.mp3 */; };
+		875F3F602A0258B4006C6F29 /* cheering-and-clapping-crowd-1-5995.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F5F2A0258B4006C6F29 /* cheering-and-clapping-crowd-1-5995.mp3 */; };
+		875F3F622A0258B9006C6F29 /* angelical-pad-143276.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F612A0258B9006C6F29 /* angelical-pad-143276.mp3 */; };
+		875F3F682A025C3B006C6F29 /* Sharing.json in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F672A025C3B006C6F29 /* Sharing.json */; };
+		875F3F6A2A025D23006C6F29 /* FullConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F692A025D22006C6F29 /* FullConfetti.json */; };
 		D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81123D629FA5FD9000A3ACF /* LottieView.swift */; };
 		D81123DB29FA603F000A3ACF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D81123DA29FA603F000A3ACF /* Lottie */; };
 		D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8695E6E29FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld */; };
@@ -32,7 +36,11 @@
 		3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F5E847D29FA2FC000BFB344 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusicModel.swift; sourceTree = "<group>"; };
-		874A386F2A0120DE0006DF92 /* chimes-7035.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chimes-7035.mp3"; sourceTree = "<group>"; };
+		875F3F5D2A0258AC006C6F29 /* claps-44774.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "claps-44774.mp3"; sourceTree = "<group>"; };
+		875F3F5F2A0258B4006C6F29 /* cheering-and-clapping-crowd-1-5995.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cheering-and-clapping-crowd-1-5995.mp3"; sourceTree = "<group>"; };
+		875F3F612A0258B9006C6F29 /* angelical-pad-143276.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "angelical-pad-143276.mp3"; sourceTree = "<group>"; };
+		875F3F672A025C3B006C6F29 /* Sharing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sharing.json; sourceTree = "<group>"; };
+		875F3F692A025D22006C6F29 /* FullConfetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FullConfetti.json; sourceTree = "<group>"; };
 		D81123D629FA5FD9000A3ACF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D8695E6F29FB8FCE008C68F5 /* JungwookTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JungwookTeam.xcdatamodel; sourceTree = "<group>"; };
 		D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
@@ -145,7 +153,9 @@
 		874A386A2A011EC80006DF92 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				874A386F2A0120DE0006DF92 /* chimes-7035.mp3 */,
+				875F3F612A0258B9006C6F29 /* angelical-pad-143276.mp3 */,
+				875F3F5F2A0258B4006C6F29 /* cheering-and-clapping-crowd-1-5995.mp3 */,
+				875F3F5D2A0258AC006C6F29 /* claps-44774.mp3 */,
 				874A386D2A011FCE0006DF92 /* Model */,
 				874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */,
 			);
@@ -189,6 +199,8 @@
 		D87C249529FAB3DA003005EE /* LottieJSON */ = {
 			isa = PBXGroup;
 			children = (
+				875F3F692A025D22006C6F29 /* FullConfetti.json */,
+				875F3F672A025C3B006C6F29 /* Sharing.json */,
 				D87C249829FAB90A003005EE /* Clap.json */,
 				D87C249629FAB3F9003005EE /* 3SecTimer.json */,
 			);
@@ -269,11 +281,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				874A38702A0120DE0006DF92 /* chimes-7035.mp3 in Resources */,
 				D87C249729FAB3F9003005EE /* 3SecTimer.json in Resources */,
+				875F3F5E2A0258AC006C6F29 /* claps-44774.mp3 in Resources */,
+				875F3F682A025C3B006C6F29 /* Sharing.json in Resources */,
 				D87C249929FAB90A003005EE /* Clap.json in Resources */,
+				875F3F622A0258B9006C6F29 /* angelical-pad-143276.mp3 in Resources */,
 				3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */,
+				875F3F6A2A025D23006C6F29 /* FullConfetti.json in Resources */,
 				3F5E83DD29F136AB00BFB344 /* Assets.xcassets in Resources */,
+				875F3F602A0258B4006C6F29 /* cheering-and-clapping-crowd-1-5995.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

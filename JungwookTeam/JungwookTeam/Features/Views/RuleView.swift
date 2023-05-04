@@ -47,6 +47,7 @@ struct RuleView: View {
 
                                 Text("7. All players should be honest throughout the game! Try to enjoy and live in the moment while playing the game! Click ‘Start’ if you are ready!")
                                     .padding(8)
+                    
                             }
                             .background(Color("BackgroundText"))
                             .font(.system(size: 16))
