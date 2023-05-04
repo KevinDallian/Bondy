@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     
-    @StateObject var gameModel : GameModel
+    var gameModel = GameModel.gameModel
     let player : Player
     
     let adaptiveColumn = [
