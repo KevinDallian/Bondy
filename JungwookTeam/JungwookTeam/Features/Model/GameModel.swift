@@ -93,9 +93,22 @@ class GameModel : ObservableObject{
     }
     
     func choosePlayerTurn() -> Player {
-        let player = players.first { player in
+        var player = players.first { player in
             player.hasPlayed == false
         }!
+        player.hasPlayed = true
         return player
+    }
+    
+    func choosePlayerToRoll(exclude: Player) -> [String]{
+        let players = players.filter { player in
+            player.name != exclude.name
+        }
+        var nameOfPlayers : [String] = []
+
+        for player in players {
+            nameOfPlayers.append(player.name)
+        }
+        return nameOfPlayers
     }
 }

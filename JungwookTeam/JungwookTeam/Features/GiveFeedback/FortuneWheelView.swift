@@ -63,7 +63,7 @@ struct FortuneWheelView: View {
                 }
                 .animation(.easeInOut, value: isEnded)
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

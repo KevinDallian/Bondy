@@ -56,7 +56,7 @@ struct FeedbackView: View {
                             .ignoresSafeArea()
                             .frame(height: 125)
                         VStack{
-                            Text("\(player) turn")
+                            Text("\(player)'s turn")
                                 .foregroundColor(.white)
                                 .textCase(.uppercase)
                                 .font(.title2.weight(.bold))
