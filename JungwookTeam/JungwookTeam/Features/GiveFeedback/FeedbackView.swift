@@ -11,6 +11,15 @@ struct FeedbackView: View {
     let player : String
     let promptType : String
     var gameModel = GameModel.gameModel
+    var feedbackViewModel : FeedbackViewModel {
+        if promptType == "feedback"{
+            return FeedbackViewModel.feedback
+        }else if promptType == "storyteller"{
+            return FeedbackViewModel.storyteller
+        }else {
+            return FeedbackViewModel.share
+        }
+    }
     var body: some View {
         NavigationView{
             ZStack{
@@ -18,12 +27,12 @@ struct FeedbackView: View {
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
-                    Text(promptType == "feedback" ? "Feedback Time!" : "Back-to-Back Time!")
+                    Text(feedbackViewModel.title)
                         .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 30.0)
-                    Text(promptType == "feedback" ? "Here are some hints that can help you give feedback for your storyteller!" : "Here are some hints that can help you for giving your thought")
+                    Text(feedbackViewModel.caption)
                         .font(.body)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,20 +46,8 @@ struct FeedbackView: View {
                             .fill(Color("LightPurple"))
                             .frame(width: 285.73, height: 337.19)
                         VStack(alignment: .leading, spacing: 14){
-                            if promptType == "feedback"{
-                                Text("1. How you feel after hearing their stories? Please explain it!")
-                                    .lineSpacing(10)
-                                Text("2. Do their stories meet your expectations? Please describe why!")
-                                    .lineSpacing(10)
-                                Text("3. What are the new things you learn after hearing their stories?")
-                                    .lineSpacing(10)
-                            
-                            }else if promptType == "storyteller"{
-                                Text("1. How you feel after hearing their feedback? Please explain it!")
-                                    .lineSpacing(10)
-                                Text("2. Do their stories meet your expectations? Please describe why!")
-                                    .lineSpacing(10)
-                                Text("3. What are the new things you learn after hearing their feedback?")
+                            ForEach(feedbackViewModel.prompts, id: \.self){ prompt in
+                                Text("\(prompt.prompt)")
                                     .lineSpacing(10)
                             }
                         }.offset(y: -30)

@@ -12,7 +12,7 @@ struct RuleView: View {
     var ruleText: [RuleViewModel] = RuleViewModel.ruleViewText
     
     var body: some View{
-        NavigationView{
+        NavigationStack{
             ZStack{
                 Color("Purple").ignoresSafeArea()
                 VStack{
@@ -56,7 +56,6 @@ struct RuleView: View {
                             Spacer()
                         }
                     }
-                   
                     Spacer()
                 }
                 .padding()
