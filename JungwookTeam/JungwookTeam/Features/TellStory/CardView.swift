@@ -116,7 +116,7 @@ struct CardView: View {
                                 Button {
                                     navigateToNextView = true
                                 } label: {
-                                    ButtonView(title: "Next")
+                                    ButtonView(title: "NEXT")
                                 }
                             }
                             .multilineTextAlignment(.center)

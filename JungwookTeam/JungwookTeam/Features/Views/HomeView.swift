@@ -70,7 +70,7 @@ struct HomeView: View {
                             gameModel.initializeGame(names: names)
                             showingNextView = true
                         }label: {
-                            ButtonView(title: "Start")
+                            ButtonView(title: "START")
                         }
                         Spacer()
                     }
