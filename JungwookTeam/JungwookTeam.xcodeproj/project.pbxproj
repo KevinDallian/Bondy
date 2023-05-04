@@ -20,6 +20,7 @@
 		D87C249929FAB90A003005EE /* Clap.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249829FAB90A003005EE /* Clap.json */; };
 		D89F3CA72A0377A900A7253D /* Confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = D89F3CA62A0377A900A7253D /* Confetti.json */; };
 		D89F3CA92A0377DB00A7253D /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89F3CA82A0377DB00A7253D /* FinishedView.swift */; };
+		D89F3CAB2A03963600A7253D /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89F3CAA2A03963600A7253D /* CardViewModel.swift */; };
 		D8A8A39B2A023A6C006D3689 /* RuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A39A2A023A6C006D3689 /* RuleViewModel.swift */; };
 		D8A8A3A02A023BD0006D3689 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A39F2A023BD0006D3689 /* OnBoardingModel.swift */; };
 		D8A8A3A22A023BEC006D3689 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A12A023BEC006D3689 /* OnBoardingPageView.swift */; };
@@ -47,6 +48,7 @@
 		D87C249829FAB90A003005EE /* Clap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Clap.json; sourceTree = "<group>"; };
 		D89F3CA62A0377A900A7253D /* Confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Confetti.json; sourceTree = "<group>"; };
 		D89F3CA82A0377DB00A7253D /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
+		D89F3CAA2A03963600A7253D /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D8A8A39A2A023A6C006D3689 /* RuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewModel.swift; sourceTree = "<group>"; };
 		D8A8A39F2A023BD0006D3689 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		D8A8A3A12A023BEC006D3689 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A8A3A62A023F4C006D3689 /* CardView.swift */,
+				D89F3CAA2A03963600A7253D /* CardViewModel.swift */,
 			);
 			path = TellStory;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				D8E6A02E2A02551700A7895F /* Player.swift in Sources */,
 				D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */,
 				D8A8A3A92A024D9D006D3689 /* GameModel.swift in Sources */,
+				D89F3CAB2A03963600A7253D /* CardViewModel.swift in Sources */,
 				D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,
 				D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */,
