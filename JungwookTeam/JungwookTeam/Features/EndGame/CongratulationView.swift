@@ -31,6 +31,9 @@ struct CongratulationView: View {
                         .scaleEffect(0.25)
                         .frame(width: 390, height: 324.72)
                         .position(x: 195, y: 260)
+                        .onAppear {
+                            playSound(sound: "Clap", type: "mp3")
+                        }
                     VStack {
                         Button {
                             gameModel.playAgain()
@@ -65,6 +68,7 @@ struct CongratulationView: View {
         }
         .navigationBarBackButtonHidden(true)
     }
+    
 }
 
 struct CongratulationView_Previews: PreviewProvider {

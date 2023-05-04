@@ -16,6 +16,9 @@ struct FinishedView: View {
                 Color("Purple")
                     .ignoresSafeArea()
                 LottieView(name: "Confetti")
+                    .onAppear {
+                        playSound(sound: "Cheers", type: "mp3")
+                    }
                 VStack{
                     Text("Back-to-Back Time!")
                         .font(.largeTitle.weight(.bold))
