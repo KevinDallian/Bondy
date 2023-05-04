@@ -11,7 +11,7 @@ struct HomeView: View {
     @State private var counter = 2
     @State var names : [String] = ["", ""]
     @State var showingNextView = false
-    @StateObject var gameModel = GameModel()
+    var gameModel = GameModel.gameModel
     var body: some View {
         NavigationStack {
             ZStack{
@@ -70,13 +70,13 @@ struct HomeView: View {
                             gameModel.initializeGame(names: names)
                             showingNextView = true
                         }label: {
-                            ButtonView(title: "Start")
+                            ButtonView(title: "START")
                         }
                         Spacer()
                     }
                 }.padding()
                     .navigationDestination(isPresented: $showingNextView) {
-                        RuleView(gameModel: gameModel)
+                        RuleView()
                     }
             }
             

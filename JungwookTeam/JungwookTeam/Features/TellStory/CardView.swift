@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     
-    @StateObject var gameModel : GameModel
+    var gameModel = GameModel.gameModel
     let player : Player
     
     let adaptiveColumn = [
@@ -116,7 +116,7 @@ struct CardView: View {
                                 Button {
                                     navigateToNextView = true
                                 } label: {
-                                    ButtonView(title: "Next")
+                                    ButtonView(title: "NEXT")
                                 }
                             }
                             .multilineTextAlignment(.center)
@@ -132,6 +132,9 @@ struct CardView: View {
         }
         .navigationDestination(isPresented: $navigateToNextView) {
             FortuneWheelView(players: gameModel.choosePlayerToRoll(exclude: player))
+        }
+        .onDisappear {
+            isTapped = false
         }
     }
     

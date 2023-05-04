@@ -12,10 +12,13 @@ class GameModel : ObservableObject{
     let container : NSPersistentContainer
     let context : NSManagedObjectContext
     
+    static let gameModel = GameModel()
+    
     @Published var players : [Player] = []
     @Published var cards : [CardEntity] = []
+    @Published var whosTurn : Player = Player(name: "init")
     
-    init(){
+    private init(){
         container = NSPersistentContainer(name: "JungwookTeam")
         container.loadPersistentStores { description, error in
             if let error = error {
@@ -92,11 +95,22 @@ class GameModel : ObservableObject{
         players.removeAll()
     }
     
+    func playersHasPlayedAll() -> Bool {
+        for player in players {
+            if !player.hasPlayed {
+                return false
+            }
+        }
+        return true
+    }
+    
     func choosePlayerTurn() -> Player {
         var player = players.first { player in
             player.hasPlayed == false
         }!
-        player.hasPlayed = true
+        let playerIndex = players.firstIndex(of: player)
+        players[playerIndex!].hasPlayed = true
+        whosTurn = player
         return player
     }
     
