@@ -17,6 +17,7 @@
 		875F3F622A0258B9006C6F29 /* angelical-pad-143276.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F612A0258B9006C6F29 /* angelical-pad-143276.mp3 */; };
 		875F3F682A025C3B006C6F29 /* Sharing.json in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F672A025C3B006C6F29 /* Sharing.json */; };
 		875F3F6A2A025D23006C6F29 /* FullConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F692A025D22006C6F29 /* FullConfetti.json */; };
+		870812B12A039A9600334D6C /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870812B02A039A9600334D6C /* CongratulationView.swift */; };
 		D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81123D629FA5FD9000A3ACF /* LottieView.swift */; };
 		D81123DB29FA603F000A3ACF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D81123DA29FA603F000A3ACF /* Lottie */; };
 		D81F86C22A039D6A00C709CD /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F86C12A039D6A00C709CD /* FeedbackViewModel.swift */; };
@@ -54,6 +55,7 @@
 		875F3F612A0258B9006C6F29 /* angelical-pad-143276.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "angelical-pad-143276.mp3"; sourceTree = "<group>"; };
 		875F3F672A025C3B006C6F29 /* Sharing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sharing.json; sourceTree = "<group>"; };
 		875F3F692A025D22006C6F29 /* FullConfetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FullConfetti.json; sourceTree = "<group>"; };
+		870812B02A039A9600334D6C /* CongratulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
 		D81123D629FA5FD9000A3ACF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D81F86C12A039D6A00C709CD /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
 		D8695E6F29FB8FCE008C68F5 /* JungwookTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JungwookTeam.xcdatamodel; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B8B4A52A027D6E0002963F /* LessonView.swift */,
+				870812B02A039A9600334D6C /* CongratulationView.swift */,
 			);
 			path = EndGame;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				D8A8A3A72A023F4C006D3689 /* CardView.swift in Sources */,
 				D8E6A02E2A02551700A7895F /* Player.swift in Sources */,
 				D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */,
+				870812B12A039A9600334D6C /* CongratulationView.swift in Sources */,
 				D8A8A3A92A024D9D006D3689 /* GameModel.swift in Sources */,
 				D89F3CAB2A03963600A7253D /* CardViewModel.swift in Sources */,
 				D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */,
