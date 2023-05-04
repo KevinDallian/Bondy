@@ -28,7 +28,7 @@ struct FinishedView: View {
                     Spacer()
                     ZStack{
                         Color("DarkPurple").ignoresSafeArea()
-                            .frame(height: 125)
+                            .frame(height: 145)
                         VStack{
                             Text("Nice Try!")
                                 .font(.system(size: 21))

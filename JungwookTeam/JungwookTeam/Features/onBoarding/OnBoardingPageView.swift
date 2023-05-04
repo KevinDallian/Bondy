@@ -18,7 +18,7 @@ struct OnBoardingPageView: View {
                 Image("\(onBoardingItem.image)")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 300, height: 300)
+                    .frame(width: 312, height: 408)
                 
                 Text(onBoardingItem.description)
                     .foregroundColor(.white)
