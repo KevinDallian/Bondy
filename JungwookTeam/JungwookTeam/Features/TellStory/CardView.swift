@@ -11,10 +11,10 @@ struct CardView: View {
     
     var gameModel = GameModel.gameModel
     let player : Player
-    
     let adaptiveColumn = [
         GridItem(.adaptive(minimum: 120))
     ]
+    let prompts = CardViewModel.prompts
     
     @State private var cardPulse: CGFloat = 1
     @State private var isTapped: Bool = false
@@ -76,7 +76,7 @@ struct CardView: View {
                                     .frame(width: 373, height: 27)
                                     .background(.white)
                                 
-                                Text("What reminds you of other players")
+                                Text("\(prompts.randomElement()!.promptContent)")
                                     .font(.system(size: 14))
                                     .frame(width: 303, height: 40)
                                     .foregroundColor(.white)
@@ -87,7 +87,6 @@ struct CardView: View {
                         .padding()
                         .frame(width: 339, height:60)
                         .cornerRadius(8)
-                        
                         .offset(y: 10)
                         
                         LazyVGrid(columns: adaptiveColumn, spacing: 10){
@@ -110,7 +109,6 @@ struct CardView: View {
                                     .fontWeight(.heavy)
                                     .foregroundColor(.white)
                                     .textCase(.uppercase)
-                                
                                 Text("Click next if you are finished telling your story")
                                     .font(.system(size: 12))
                                     .fontWeight(.medium)
