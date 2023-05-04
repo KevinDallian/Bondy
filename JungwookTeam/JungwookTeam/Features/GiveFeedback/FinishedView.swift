@@ -8,48 +8,60 @@
 import SwiftUI
 
 struct FinishedView: View {
+    var gameModel = GameModel.gameModel
     @State var navigateToNextView = false
     var body: some View {
-        ZStack{
-            Color("Purple")
-                .ignoresSafeArea()
-            LottieView(name: "Confetti")
-            VStack{
-                Text("Back-to-Back Time!")
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.white)
-                    .offset(y: 100)
-                Spacer()
-                Text("Finished !!")
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.white)
-                Spacer()
-                ZStack{
-                    Color("DarkPurple").ignoresSafeArea()
-                        .frame(height: 125)
-                    VStack{
-                        Text("Nice Try!")
-                            .font(.system(size: 21))
-                            .fontWeight(.heavy)
-                            .foregroundColor(.white)
-                            .textCase(.uppercase)
-                        
-                        Text("Click next if you are finished telling your story")
-                            .font(.system(size: 12))
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                            .padding(.top, -6)
-                        Button {
-                            navigateToNextView = true
-                        } label: {
-                            ButtonView(title: "Next")
+        NavigationStack{
+            ZStack{
+                Color("Purple")
+                    .ignoresSafeArea()
+                LottieView(name: "Confetti")
+                VStack{
+                    Text("Back-to-Back Time!")
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.white)
+                        .offset(y: 100)
+                    Spacer()
+                    Text("Finished !!")
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.white)
+                    Spacer()
+                    ZStack{
+                        Color("DarkPurple").ignoresSafeArea()
+                            .frame(height: 125)
+                        VStack{
+                            Text("Nice Try!")
+                                .font(.system(size: 21))
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                                .textCase(.uppercase)
+                            
+                            Text("Click next if you are finished telling your story")
+                                .font(.system(size: 12))
+                                .fontWeight(.medium)
+                                .foregroundColor(.white)
+                                .padding(.top, -6)
+                            Button {
+                                navigateToNextView = true
+                            } label: {
+                                ButtonView(title: "Next")
+                            }
                         }
+                        .multilineTextAlignment(.center)
                     }
-                    .multilineTextAlignment(.center)
+                    
+                }
+                .navigationDestination(isPresented: $navigateToNextView) {
+                    if gameModel.playersHasPlayedAll(){
+                        // navigate to endGame
+                        LessonView()
+                    }else{
+                        CardView(player: gameModel.choosePlayerTurn())
+                    }
                 }
             }
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 

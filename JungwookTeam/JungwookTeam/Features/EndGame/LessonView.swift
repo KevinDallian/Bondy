@@ -76,6 +76,7 @@ struct LessonView: View {
                 }
             .multilineTextAlignment(.leading)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

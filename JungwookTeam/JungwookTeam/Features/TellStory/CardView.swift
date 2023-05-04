@@ -133,6 +133,9 @@ struct CardView: View {
         .navigationDestination(isPresented: $navigateToNextView) {
             FortuneWheelView(players: gameModel.choosePlayerToRoll(exclude: player))
         }
+        .onDisappear {
+            isTapped = false
+        }
     }
     
 }

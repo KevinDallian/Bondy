@@ -95,11 +95,21 @@ class GameModel : ObservableObject{
         players.removeAll()
     }
     
+    func playersHasPlayedAll() -> Bool {
+        for player in players {
+            if !player.hasPlayed {
+                return false
+            }
+        }
+        return true
+    }
+    
     func choosePlayerTurn() -> Player {
         var player = players.first { player in
             player.hasPlayed == false
         }!
-        player.hasPlayed = true
+        let playerIndex = players.firstIndex(of: player)
+        players[playerIndex!].hasPlayed = true
         whosTurn = player
         return player
     }
