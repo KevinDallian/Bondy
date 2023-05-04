@@ -11,6 +11,7 @@
 		3F5E83DD29F136AB00BFB344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DC29F136AB00BFB344 /* Assets.xcassets */; };
 		3F5E83E029F136AB00BFB344 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */; };
 		3F5E847E29FA2FC000BFB344 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E847D29FA2FC000BFB344 /* RuleView.swift */; };
+		870812B12A039A9600334D6C /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870812B02A039A9600334D6C /* CongratulationView.swift */; };
 		D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81123D629FA5FD9000A3ACF /* LottieView.swift */; };
 		D81123DB29FA603F000A3ACF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D81123DA29FA603F000A3ACF /* Lottie */; };
 		D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8695E6E29FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 		3F5E83DC29F136AB00BFB344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5E83DF29F136AB00BFB344 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F5E847D29FA2FC000BFB344 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		870812B02A039A9600334D6C /* CongratulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
 		D81123D629FA5FD9000A3ACF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D8695E6F29FB8FCE008C68F5 /* JungwookTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JungwookTeam.xcdatamodel; sourceTree = "<group>"; };
 		D8695E7129FB9C67008C68F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B8B4A52A027D6E0002963F /* LessonView.swift */,
+				870812B02A039A9600334D6C /* CongratulationView.swift */,
 			);
 			path = EndGame;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				D8A8A3A72A023F4C006D3689 /* CardView.swift in Sources */,
 				D8E6A02E2A02551700A7895F /* Player.swift in Sources */,
 				D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */,
+				870812B12A039A9600334D6C /* CongratulationView.swift in Sources */,
 				D8A8A3A92A024D9D006D3689 /* GameModel.swift in Sources */,
 				D8DE413A2A01230C0014D154 /* HomeView.swift in Sources */,
 				3F5E83D929F136AA00BFB344 /* JungwookTeamApp.swift in Sources */,

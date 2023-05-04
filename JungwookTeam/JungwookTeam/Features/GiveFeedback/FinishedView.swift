@@ -28,14 +28,14 @@ struct FinishedView: View {
                     Spacer()
                     ZStack{
                         Color("DarkPurple").ignoresSafeArea()
-                            .frame(height: 125)
+                            .frame(height: 137)
                         VStack{
                             Text("Nice Try!")
                                 .font(.system(size: 21))
                                 .fontWeight(.heavy)
                                 .foregroundColor(.white)
                                 .textCase(.uppercase)
-                            
+                                .padding(.top, 10)
                             Text("Click next if you are finished telling your story")
                                 .font(.system(size: 12))
                                 .fontWeight(.medium)
@@ -46,6 +46,7 @@ struct FinishedView: View {
                             } label: {
                                 ButtonView(title: "Next")
                             }
+                            .padding(.bottom, 15)
                         }
                         .multilineTextAlignment(.center)
                     }
