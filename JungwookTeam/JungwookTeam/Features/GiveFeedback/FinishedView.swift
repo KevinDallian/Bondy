@@ -1,4 +1,4 @@
-s//
+//
 //  FinishedView.swift
 //  JungwookTeam
 //
@@ -50,12 +50,10 @@ struct FinishedView: View {
                         }
                         .multilineTextAlignment(.center)
                     }
-                    
                 }
                 .navigationDestination(isPresented: $navigateToNextView) {
                     if gameModel.playersHasPlayedAll(){
-                        // navigate to endGame
-                        LessonView()
+                        CongratulationView()
                     }else{
                         CardView(player: gameModel.choosePlayerTurn())
                     }

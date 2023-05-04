@@ -9,46 +9,61 @@ import SwiftUI
 
 struct CongratulationView: View {
     @State var navigateToNextView = false
+    @State var buttonPressed = ""
+    var gameModel = GameModel.gameModel
+    
     var body: some View {
-        ZStack {
-            Color("Purple")
-                .ignoresSafeArea()
-            VStack {
-                Text("Well done!")
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.white)
-                //                    .offset(y: 100)
-                    .padding(.top, 10)
-                Text("You complete the game!!")
-                    .font(.title.weight(.semibold))
-                    .foregroundColor(.white)
-                Spacer()
-                LottieView(name: "Clap")
-                    .scaleEffect(0.25)
-                    .frame(width: 390, height: 324.72)
-                    .position(x: 195, y: 260)
+        NavigationStack{
+            ZStack {
+                Color("Purple")
+                    .ignoresSafeArea()
                 VStack {
-                    Button {
-                        // nanti diganti buat navigate ke view yang card buat tell story
-                        navigateToNextView = true
-                    } label: {
-                        ButtonView(title: "PLAY AGAIN")
+                    Text("Well done!")
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.white)
+                    //                    .offset(y: 100)
+                        .padding(.top, 10)
+                    Text("You complete the game!!")
+                        .font(.title.weight(.semibold))
+                        .foregroundColor(.white)
+                    Spacer()
+                    LottieView(name: "Clap")
+                        .scaleEffect(0.25)
+                        .frame(width: 390, height: 324.72)
+                        .position(x: 195, y: 260)
+                    VStack {
+                        Button {
+                            gameModel.playAgain()
+                            buttonPressed = "playAgain"
+                            navigateToNextView = true
+                        } label: {
+                            ButtonView(title: "PLAY AGAIN")
+                        }
+                        .padding(.bottom, 30)
+                        
+                        Button {
+                            gameModel.resetGame()
+                            buttonPressed = "endGame"
+                            navigateToNextView = true
+                        } label: {
+                            ButtonView(title: "END GAME", color: Color("Red"))
+                        }
+                        .padding(.bottom, 20)
                     }
-                    .padding(.bottom, 30)
                     
-                    Button {
-                        // nanti diganti buat navigate ke view yang share feeling
-                        navigateToNextView = true
-                    } label: {
-                        ButtonView(title: "END GAME", color: Color("Red"))
-                    }
-                    .padding(.bottom, 20)
                 }
                 
+                
             }
-            
-            
         }
+        .navigationDestination(isPresented: $navigateToNextView) {
+            if buttonPressed == "playAgain"{
+                CardView(player: gameModel.choosePlayerTurn())
+            }else if buttonPressed == "endGame"{
+                FeedbackView(player: "ALL PLAYER", promptType: "share")
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

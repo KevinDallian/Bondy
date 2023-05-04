@@ -105,7 +105,7 @@ class GameModel : ObservableObject{
     }
     
     func choosePlayerTurn() -> Player {
-        var player = players.first { player in
+        let player = players.first { player in
             player.hasPlayed == false
         }!
         let playerIndex = players.firstIndex(of: player)
@@ -119,10 +119,23 @@ class GameModel : ObservableObject{
             player.name != exclude.name
         }
         var nameOfPlayers : [String] = []
-
         for player in players {
             nameOfPlayers.append(player.name)
         }
         return nameOfPlayers
+    }
+    
+    func choosePlayerFeedback(exclude: Player) -> Player {
+        let player = players.first{ player in
+            player.name != exclude.name
+        }!
+        return player
+    }
+    
+    func playAgain(){
+        for player in players {
+            let playerIndex = players.firstIndex(of: player)
+            players[playerIndex!].hasPlayed = false
+        }
     }
 }

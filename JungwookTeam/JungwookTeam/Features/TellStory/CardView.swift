@@ -132,7 +132,12 @@ struct CardView: View {
             .navigationBarBackButtonHidden(true)
         }
         .navigationDestination(isPresented: $navigateToNextView) {
-            FortuneWheelView(players: gameModel.choosePlayerToRoll(exclude: player))
+            if gameModel.players.count == 2{
+                FeedbackView(player: gameModel.choosePlayerFeedback(exclude: player).name, promptType: "feedback")
+            }else{
+                FortuneWheelView(players: gameModel.choosePlayerToRoll(exclude: player))
+            }
+            
         }
         .onDisappear {
             isTapped = false
