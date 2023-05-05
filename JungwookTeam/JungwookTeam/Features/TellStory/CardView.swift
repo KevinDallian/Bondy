@@ -75,6 +75,7 @@ struct CardView: View {
                                     .font(.system(size: 14))
                                     .frame(width: 373, height: 27)
                                     .background(.white)
+                                    .foregroundColor(.black)
                                 
                                 Text("\(prompts.randomElement()!.promptContent)")
                                     .font(.system(size: 14))

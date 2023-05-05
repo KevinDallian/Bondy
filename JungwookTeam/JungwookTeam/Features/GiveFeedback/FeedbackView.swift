@@ -48,6 +48,7 @@ struct FeedbackView: View {
                         VStack(alignment: .leading, spacing: 14){
                             ForEach(feedbackViewModel.prompts, id: \.self){ prompt in
                                 Text("\(prompt.prompt)")
+                                    .foregroundColor(.black)
                                     .lineSpacing(10)
                             }
                         }.offset(y: -30)
@@ -74,7 +75,7 @@ struct FeedbackView: View {
                                 }else if promptType == "storyteller"{
                                     FinishedView()
                                 }else{
-                                    HomeView()
+                                    LessonView()
                                 }
                                 
                             }label: {
