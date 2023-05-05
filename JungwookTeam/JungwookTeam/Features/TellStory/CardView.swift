@@ -39,7 +39,7 @@ struct CardView: View {
                             .padding(.top, 20)
                         
                         Button {
-                            isTapped.toggle()
+                            isTapped = true
                         } label: {
                             Image("Deck")
                                 .resizable()
