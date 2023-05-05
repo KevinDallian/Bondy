@@ -47,7 +47,7 @@ struct FinishedView: View {
                             Button {
                                 navigateToNextView = true
                             } label: {
-                                ButtonView(title: "Next")
+                                ButtonView(title: "NEXT")
                             }
                             .padding(.bottom, 15)
                         }

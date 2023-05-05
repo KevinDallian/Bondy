@@ -51,7 +51,14 @@ struct RuleView: View {
                             NavigationLink {
                                 CardView(player: gameModel.choosePlayerTurn())
                             } label: {
-                                ButtonView(title: "START")
+                                Text("START")
+                                    .foregroundColor(.white)
+                                    .frame(width: 325, height: 49)
+                                    .background(Color("Aqua"))
+                                    .font(.system(size: 18))
+                                    .cornerRadius(7)
+                                    .bold()
+                                    .padding(.bottom, 10)
                             }
                             Spacer()
                         }

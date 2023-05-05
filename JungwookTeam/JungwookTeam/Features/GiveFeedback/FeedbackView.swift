@@ -71,8 +71,10 @@ struct FeedbackView: View {
                             NavigationLink{
                                 if promptType == "feedback"{
                                     FeedbackView(player: gameModel.whosTurn.name, promptType: "storyteller")
-                                }else{
+                                }else if promptType == "storyteller"{
                                     FinishedView()
+                                }else{
+                                    HomeView()
                                 }
                                 
                             }label: {

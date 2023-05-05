@@ -186,17 +186,9 @@
 			children = (
 				875F3F5F2A0258B4006C6F29 /* Cheers.mp3 */,
 				875F3F5D2A0258AC006C6F29 /* Clap.mp3 */,
-				874A386D2A011FCE0006DF92 /* Model */,
 				874A386B2A011FB80006DF92 /* BackgroundMusicModel.swift */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		874A386D2A011FCE0006DF92 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D81123D829FA5FE8000A3ACF /* Lottie */ = {
@@ -528,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JungwookTeam/Preview Content\"";
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -556,6 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JungwookTeam/Preview Content\"";
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
