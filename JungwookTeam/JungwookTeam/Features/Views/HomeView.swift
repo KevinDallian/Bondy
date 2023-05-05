@@ -72,8 +72,14 @@ struct HomeView: View {
                             gameModel.initializeGame(names: names)
                             showingNextView = true
                         }label: {
-                            ButtonView(title: "START")
-                        }
+                            if names.contains(""){
+                                ButtonView(title: "START", color: Color.gray)
+                            }
+                            else{
+                                ButtonView(title: "START")
+                            }
+                            
+                        }.disabled(names.contains(""))
                         Spacer()
                     }
                 }.padding()

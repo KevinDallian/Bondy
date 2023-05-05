@@ -136,6 +136,17 @@ class GameModel : ObservableObject{
         for player in players {
             let playerIndex = players.firstIndex(of: player)
             players[playerIndex!].hasPlayed = false
+            players[playerIndex!].cards.removeAll()
+            var cardsToRandom = cards.filter { card in
+                card.name != "Card Back"
+            }
+            for _ in 0...3 {
+                let card = cardsToRandom.randomElement()!
+                players[playerIndex!].addCard(card: card)
+                let cardIndex = cardsToRandom.firstIndex(of: card) ?? 1
+                cardsToRandom.remove(at: cardIndex)
+            }
+            players.shuffle()
         }
     }
 }
