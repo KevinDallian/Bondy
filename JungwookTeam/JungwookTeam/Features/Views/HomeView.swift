@@ -78,8 +78,7 @@ struct HomeView: View {
                             else{
                                 ButtonView(title: "START")
                             }
-                            
-                        }.disabled(names.contains(""))
+                        }.disabled(names.isEmpty)
                         Spacer()
                     }
                 }.padding()
