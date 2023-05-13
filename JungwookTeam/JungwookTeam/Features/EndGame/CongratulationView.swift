@@ -50,6 +50,7 @@ struct CongratulationView: View {
                         } label: {
                             ButtonView(title: "END GAME", color: Color("Red"))
                         }
+                        
                         .padding(.bottom, 20)
                     }
                     
@@ -62,7 +63,7 @@ struct CongratulationView: View {
             if buttonPressed == "playAgain"{
                 CardView(player: gameModel.choosePlayerTurn())
             }else if buttonPressed == "endGame"{
-                FeedbackView(player: "ALL PLAYER", promptType: "share")
+                FeedbackView(player: "ALL PLAYER", promptType: .share)
             }
         }
         .navigationBarBackButtonHidden(true)

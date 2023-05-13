@@ -48,7 +48,7 @@ struct FortuneWheelView: View {
                         Color("DarkPurple")
                             .ignoresSafeArea()
                         NavigationLink{
-                            FeedbackView(player: players[selectedIndex], promptType: "feedback")
+                            FeedbackView(player: players[selectedIndex], promptType: .feedback)
                         }label: {
                             if isEnded{
                                 ButtonView(title: "It's Feedback Time")

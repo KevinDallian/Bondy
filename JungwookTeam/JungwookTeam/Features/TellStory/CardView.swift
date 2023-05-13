@@ -134,7 +134,7 @@ struct CardView: View {
         }
         .navigationDestination(isPresented: $navigateToNextView) {
             if gameModel.players.count == 2{
-                FeedbackView(player: gameModel.choosePlayerFeedback(exclude: player).name, promptType: "feedback")
+                FeedbackView(player: gameModel.choosePlayerFeedback(exclude: player).name, promptType: .feedback)
             }else{
                 FortuneWheelView(players: gameModel.choosePlayerToRoll(exclude: player))
             }

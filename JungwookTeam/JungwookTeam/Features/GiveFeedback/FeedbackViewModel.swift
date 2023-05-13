@@ -7,16 +7,29 @@
 
 import Foundation
 
+enum PromptType{
+    case feedback
+    case storyteller
+    case share
+    
+    func generateViewModel(promptType: PromptType) -> FeedbackViewModel{
+        switch promptType{
+            case .feedback:
+                    return FeedbackViewModel(promptType: .feedback, title: "Feedback Time!", caption: "Here are some hints that can help you give feedback for the story teller!", prompts: Prompt.feedback)
+            case .share:
+                return FeedbackViewModel(promptType: .storyteller, title: "Back-to-Back Time!", caption: "Here are some hints that can help you discuss for giving your thoughts", prompts: Prompt.storyteller)
+            case.storyteller:
+                return FeedbackViewModel(promptType: .share, title: "Let's share our feelings!", caption: "Here are some hints that can help you discuss for your sharing time!", prompts: Prompt.share)
+        }
+    }
+}
+
 struct FeedbackViewModel {
-    var promptType : String
+
+    var promptType : PromptType
     var title : String
     var caption : String
     var prompts : [Prompt]
-    static let feedback = FeedbackViewModel(promptType: "feedback", title: "Feedback Time!", caption: "Here are some hints that can help you give feedback for the story teller!", prompts: Prompt.feedback)
-    
-    static let storyteller = FeedbackViewModel(promptType: "storyteller", title: "Back-to-Back Time!", caption: "Here are some hints that can help you discuss for giving your thoughts", prompts: Prompt.storyteller)
-    
-    static let share = FeedbackViewModel(promptType: "share", title: "Let's share our feelings!", caption: "Here are some hints that can help you discuss for your sharing time!", prompts: Prompt.share)
 }
 
 struct Prompt : Hashable{

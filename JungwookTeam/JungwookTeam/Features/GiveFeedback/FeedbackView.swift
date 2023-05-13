@@ -9,16 +9,10 @@ import SwiftUI
 
 struct FeedbackView: View {
     let player : String
-    let promptType : String
+    let promptType : PromptType
     var gameModel = GameModel.gameModel
     var feedbackViewModel : FeedbackViewModel {
-        if promptType == "feedback"{
-            return FeedbackViewModel.feedback
-        }else if promptType == "storyteller"{
-            return FeedbackViewModel.storyteller
-        }else {
-            return FeedbackViewModel.share
-        }
+        promptType.generateViewModel(promptType: promptType)
     }
     var body: some View {
         NavigationView{
@@ -70,14 +64,14 @@ struct FeedbackView: View {
                                 .foregroundColor(.white)
                                 .offset(y: 8)
                             NavigationLink{
-                                if promptType == "feedback"{
-                                    FeedbackView(player: gameModel.whosTurn.name, promptType: "storyteller")
-                                }else if promptType == "storyteller"{
+                                switch promptType {
+                                case .feedback:
+                                    FeedbackView(player: gameModel.whosTurn.name, promptType: .storyteller)
+                                case .storyteller:
                                     FinishedView()
-                                }else{
+                                case .share:
                                     LessonView()
                                 }
-                                
                             }label: {
                                 ButtonView(title: "NEXT")
                                     .shadow(color: Color(red: 68/255, green: 35/255, blue: 94/255), radius: 1, x: 0, y: 3)
@@ -93,6 +87,6 @@ struct FeedbackView: View {
 
 struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView(player: "Player 2", promptType: "storyteller")
+        FeedbackView(player: "Player 2", promptType: .storyteller)
     }
 }
