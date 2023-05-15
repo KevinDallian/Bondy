@@ -11,7 +11,12 @@ import SwiftUI
 struct JungwookTeamApp: App {
     var body: some Scene {
         WindowGroup {
-            OnBoardingView()
+            if UserDefaults.standard.bool(forKey: "skipOnBoarding") == false{
+                OnBoardingView()
+            }else{
+                HomeView()
+            }
+            
         }
     }
 }

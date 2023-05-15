@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct OnBoardingView: View {
-    
     @State private var pageIndex: Int = 0
     private let onBoardingPages: [OnBoarding] = OnBoarding.onBoardingPages
     private let dotApperance = UIPageControl.appearance()
-    
     var body: some View{
         NavigationView{
             ZStack{
@@ -48,8 +46,9 @@ struct OnBoardingView: View {
                                 .foregroundColor(Color("Purple"))
                         }
                     }
-                    
                 }
+            }.onDisappear {
+                UserDefaults.standard.set(true, forKey: "skipOnBoarding")
             }
         }
     }
