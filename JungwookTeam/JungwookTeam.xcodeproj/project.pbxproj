@@ -66,6 +66,7 @@
 		D8A8A3A62A023F4C006D3689 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D8A8A3A82A024D9D006D3689 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		D8B8B4A52A027D6E0002963F /* LessonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		D8C9ED132A1F1361000FB275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8DE41332A010CAA0014D154 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D8DE41352A010DE30014D154 /* FortuneWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneWheelView.swift; sourceTree = "<group>"; };
 		D8DE41372A010E590014D154 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		3F5E83D729F136AA00BFB344 /* JungwookTeam */ = {
 			isa = PBXGroup;
 			children = (
+				D8C9ED132A1F1361000FB275 /* Info.plist */,
 				3F5E84BC29FC264600BFB344 /* Application */,
 				3F5E84BD29FC266400BFB344 /* Core */,
 				3F5E84BE29FC266F00BFB344 /* Features */,
@@ -519,9 +521,9 @@
 				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JungwookTeam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Bondy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -549,9 +551,9 @@
 				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JungwookTeam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Bondy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
