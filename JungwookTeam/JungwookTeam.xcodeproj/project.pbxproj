@@ -17,10 +17,8 @@
 		875F3F602A0258B4006C6F29 /* Cheers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F5F2A0258B4006C6F29 /* Cheers.mp3 */; };
 		875F3F6A2A025D23006C6F29 /* FullConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 875F3F692A025D22006C6F29 /* FullConfetti.json */; };
 		D81123D729FA5FD9000A3ACF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81123D629FA5FD9000A3ACF /* LottieView.swift */; };
-		D81123DB29FA603F000A3ACF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D81123DA29FA603F000A3ACF /* Lottie */; };
 		D81F86C22A039D6A00C709CD /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F86C12A039D6A00C709CD /* FeedbackViewModel.swift */; };
 		D8695E7029FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8695E6E29FB8FCE008C68F5 /* JungwookTeam.xcdatamodeld */; };
-		D8695E7D29FBA59C008C68F5 /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = D8695E7C29FBA59C008C68F5 /* FortuneWheel */; };
 		D87C249729FAB3F9003005EE /* 3SecTimer.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249629FAB3F9003005EE /* 3SecTimer.json */; };
 		D87C249929FAB90A003005EE /* Clap.json in Resources */ = {isa = PBXBuildFile; fileRef = D87C249829FAB90A003005EE /* Clap.json */; };
 		D89F3CA72A0377A900A7253D /* Confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = D89F3CA62A0377A900A7253D /* Confetti.json */; };
@@ -33,6 +31,8 @@
 		D8A8A3A72A023F4C006D3689 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A62A023F4C006D3689 /* CardView.swift */; };
 		D8A8A3A92A024D9D006D3689 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A8A3A82A024D9D006D3689 /* GameModel.swift */; };
 		D8B8B4A62A027D6E0002963F /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B4A52A027D6E0002963F /* LessonView.swift */; };
+		D8C9ED0F2A1F0C5F000FB275 /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = D8C9ED0E2A1F0C5F000FB275 /* FortuneWheel */; };
+		D8C9ED122A1F0C7E000FB275 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D8C9ED112A1F0C7E000FB275 /* Lottie */; };
 		D8DE41342A010CAA0014D154 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41332A010CAA0014D154 /* ButtonView.swift */; };
 		D8DE41362A010DE30014D154 /* FortuneWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41352A010DE30014D154 /* FortuneWheelView.swift */; };
 		D8DE41382A010E590014D154 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE41372A010E590014D154 /* FeedbackView.swift */; };
@@ -78,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8695E7D29FBA59C008C68F5 /* FortuneWheel in Frameworks */,
-				D81123DB29FA603F000A3ACF /* Lottie in Frameworks */,
+				D8C9ED0F2A1F0C5F000FB275 /* FortuneWheel in Frameworks */,
+				D8C9ED122A1F0C7E000FB275 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +300,8 @@
 			);
 			name = JungwookTeam;
 			packageProductDependencies = (
-				D81123DA29FA603F000A3ACF /* Lottie */,
-				D8695E7C29FBA59C008C68F5 /* FortuneWheel */,
+				D8C9ED0E2A1F0C5F000FB275 /* FortuneWheel */,
+				D8C9ED112A1F0C7E000FB275 /* Lottie */,
 			);
 			productName = JungwookTeam;
 			productReference = 3F5E83D529F136AA00BFB344 /* JungwookTeam.app */;
@@ -332,8 +332,8 @@
 			);
 			mainGroup = 3F5E83CC29F136AA00BFB344;
 			packageReferences = (
-				D81123D929FA603F000A3ACF /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				D8695E7B29FBA59C008C68F5 /* XCRemoteSwiftPackageReference "FortuneWheel" */,
+				D8C9ED0D2A1F0C5F000FB275 /* XCRemoteSwiftPackageReference "FortuneWheel" */,
+				D8C9ED102A1F0C7E000FB275 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 3F5E83D629F136AA00BFB344 /* Products */;
 			projectDirPath = "";
@@ -524,7 +524,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,7 +555,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,15 +594,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D81123D929FA603F000A3ACF /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-		D8695E7B29FBA59C008C68F5 /* XCRemoteSwiftPackageReference "FortuneWheel" */ = {
+		D8C9ED0D2A1F0C5F000FB275 /* XCRemoteSwiftPackageReference "FortuneWheel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sameersyd/FortuneWheel.git";
 			requirement = {
@@ -608,18 +602,26 @@
 				minimumVersion = 0.1.5;
 			};
 		};
+		D8C9ED102A1F0C7E000FB275 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D81123DA29FA603F000A3ACF /* Lottie */ = {
+		D8C9ED0E2A1F0C5F000FB275 /* FortuneWheel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D81123D929FA603F000A3ACF /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-		D8695E7C29FBA59C008C68F5 /* FortuneWheel */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D8695E7B29FBA59C008C68F5 /* XCRemoteSwiftPackageReference "FortuneWheel" */;
+			package = D8C9ED0D2A1F0C5F000FB275 /* XCRemoteSwiftPackageReference "FortuneWheel" */;
 			productName = FortuneWheel;
+		};
+		D8C9ED112A1F0C7E000FB275 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8C9ED102A1F0C7E000FB275 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
